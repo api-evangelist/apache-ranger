@@ -1,0 +1,57 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/apache-ranger/refs/heads/main/json-structure/apache-ranger-audit-entry-structure.json",
+  "description": "Single access audit log entry",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string",
+      "description": "Audit entry identifier"
+    },
+    "user": {
+      "type": "string",
+      "description": "User who accessed the resource"
+    },
+    "resourceType": {
+      "type": "string",
+      "description": "Type of resource accessed"
+    },
+    "resourcePath": {
+      "type": "string",
+      "description": "Path of the accessed resource"
+    },
+    "accessType": {
+      "type": "string",
+      "description": "Type of access (read, write, etc.)"
+    },
+    "result": {
+      "type": "int32",
+      "description": "Access result (1=allowed, 0=denied)"
+    },
+    "aclEnforcer": {
+      "type": "string",
+      "description": "ACL enforcer that made the decision"
+    },
+    "agentId": {
+      "type": "string",
+      "description": "Agent/plugin that reported the audit"
+    },
+    "repoName": {
+      "type": "string",
+      "description": "Repository/service name"
+    },
+    "sessionId": {
+      "type": "string",
+      "description": "Session identifier"
+    },
+    "clientIP": {
+      "type": "string",
+      "description": "Client IP address"
+    },
+    "eventTime": {
+      "type": "datetime",
+      "description": "Time of access event"
+    }
+  },
+  "name": "AuditEntry"
+}

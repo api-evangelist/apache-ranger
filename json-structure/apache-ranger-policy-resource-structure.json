@@ -1,0 +1,24 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/apache-ranger/refs/heads/main/json-structure/apache-ranger-policy-resource-structure.json",
+  "description": "Resource specification in a Ranger policy",
+  "type": "object",
+  "properties": {
+    "values": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Resource values (paths, tables, etc.)"
+    },
+    "isRecursive": {
+      "type": "boolean",
+      "description": "Whether to apply recursively"
+    },
+    "isExcludes": {
+      "type": "boolean",
+      "description": "Whether this is an exclusion list"
+    }
+  },
+  "name": "PolicyResource"
+}

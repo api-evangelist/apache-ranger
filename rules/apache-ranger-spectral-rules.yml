@@ -1,0 +1,55 @@
+rules:
+  apache-ranger-info-title-required:
+    description: Info object must have a title
+    message: API must have a title in the info object
+    severity: error
+    given: $.info
+    then:
+      field: title
+      function: truthy
+  apache-ranger-operation-summary-required:
+    description: All operations must have a summary
+    message: Operation must have a summary
+    severity: error
+    given: $.paths[*][*]
+    then:
+      field: summary
+      function: truthy
+  apache-ranger-operation-operationId-required:
+    description: All operations must have an operationId
+    message: Operation must have an operationId
+    severity: error
+    given: $.paths[*][*]
+    then:
+      field: operationId
+      function: truthy
+  apache-ranger-operation-tags-required:
+    description: All operations must have tags
+    message: Operation must have at least one tag
+    severity: warn
+    given: $.paths[*][*]
+    then:
+      field: tags
+      function: truthy
+  apache-ranger-operation-summary-apache-prefix:
+    description: Operation summaries should be prefixed with Apache Ranger
+    message: Summary should start with "Apache Ranger"
+    severity: warn
+    given: $.paths[*][*].summary
+    then:
+      function: pattern
+      functionOptions:
+        match: "^Apache Ranger"
+  apache-ranger-response-success-required:
+    description: All operations must have a success response
+    message: Operation must define a 2xx response
+    severity: error
+    given: $.paths[*][*].responses
+    then:
+      function: schema
+      functionOptions:
+        schema:
+          anyOf:
+            - required: ["200"]
+            - required: ["201"]
+            - required: ["204"]

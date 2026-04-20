@@ -1,0 +1,35 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/apache-ranger/refs/heads/main/json-schema/apache-ranger-policy-item-schema.json",
+  "title": "PolicyItem",
+  "description": "Policy item defining access permissions",
+  "type": "object",
+  "properties": {
+    "users": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Users granted access"
+    },
+    "groups": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Groups granted access"
+    },
+    "accesses": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/AccessType"
+      }
+    },
+    "conditions": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  }
+}

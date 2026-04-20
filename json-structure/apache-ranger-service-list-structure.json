@@ -1,0 +1,18 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/apache-ranger/refs/heads/main/json-structure/apache-ranger-service-list-structure.json",
+  "description": "List of Ranger services",
+  "type": "object",
+  "properties": {
+    "totalCount": {
+      "type": "int32"
+    },
+    "services": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/RangerService"
+      }
+    }
+  },
+  "name": "ServiceList"
+}

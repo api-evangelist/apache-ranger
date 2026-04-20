@@ -1,0 +1,13 @@
+{
+  "id": 1234,
+  "name": "example-name",
+  "serviceType": "example",
+  "serviceName": "example-name",
+  "description": "example",
+  "isEnabled": true,
+  "isAuditEnabled": true,
+  "resources": {},
+  "policyItems": [
+    {}
+  ]
+}

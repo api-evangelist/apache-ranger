@@ -1,0 +1,65 @@
+name: Apache Ranger Security Policy Workflow
+description: Workflow capability for managing security policies, services, and audit logs in Apache Ranger.
+version: 1.0.0-alpha1
+apis:
+  - name: Apache Ranger REST API
+    url: https://raw.githubusercontent.com/api-evangelist/apache-ranger/refs/heads/main/apis.yml
+shared:
+  - url: capabilities/shared/ranger-api.yaml
+workflow:
+  name: ranger-workflow
+  description: Manage Ranger security policies, services, users, and audit logs.
+  steps:
+    - name: list-services
+      description: List registered Ranger services
+      api: Apache Ranger REST API
+      operation: listServices
+    - name: create-policy
+      description: Create a new security policy
+      api: Apache Ranger REST API
+      operation: createPolicy
+    - name: get-policy
+      description: Retrieve policy details
+      api: Apache Ranger REST API
+      operation: getPolicy
+    - name: audit-access
+      description: Review access audit logs
+      api: Apache Ranger REST API
+      operation: getAccessAudit
+exposes:
+  - type: rest
+    port: 6080
+    paths:
+      - /service/plugins/policies
+      - /service/plugins/policies/{id}
+      - /service/plugins/services
+      - /service/xusers/users
+      - /service/xusers/groups
+      - /service/audit/access
+  - type: mcp
+    port: 9090
+    tools:
+      - name: list-policies
+        description: List security policies
+        operation: listPolicies
+      - name: create-policy
+        description: Create a security policy
+        operation: createPolicy
+      - name: update-policy
+        description: Update a security policy
+        operation: updatePolicy
+      - name: delete-policy
+        description: Delete a security policy
+        operation: deletePolicy
+      - name: list-services
+        description: List Ranger services
+        operation: listServices
+      - name: create-service
+        description: Register a service with Ranger
+        operation: createService
+      - name: list-users
+        description: List Ranger users
+        operation: listUsers
+      - name: get-access-audit
+        description: Get access audit logs
+        operation: getAccessAudit

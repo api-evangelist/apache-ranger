@@ -1,0 +1,36 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/apache-ranger/refs/heads/main/json-schema/apache-ranger-ranger-service-schema.json",
+  "title": "RangerService",
+  "description": "Ranger service definition",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "integer",
+      "description": "Service identifier"
+    },
+    "name": {
+      "type": "string",
+      "description": "Service name"
+    },
+    "type": {
+      "type": "string",
+      "description": "Service type (hdfs, hive, hbase, kafka, etc.)"
+    },
+    "description": {
+      "type": "string",
+      "description": "Service description"
+    },
+    "isEnabled": {
+      "type": "boolean",
+      "description": "Whether the service is active"
+    },
+    "configs": {
+      "type": "object",
+      "description": "Service connection configuration",
+      "additionalProperties": {
+        "type": "string"
+      }
+    }
+  }
+}

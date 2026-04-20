@@ -1,0 +1,61 @@
+name: Apache Ranger Vocabulary
+description: Unified taxonomy mapping security policy management resources, actions, workflows, and personas for Apache Ranger.
+version: 1.0.0
+operational:
+  apis:
+    - name: Apache Ranger REST API
+      description: REST API for centralized security policy management
+  resources:
+    - name: Policy
+      description: Security access control policy for a service resource
+    - name: Service
+      description: Registered service managed by Ranger (HDFS, Hive, HBase, etc.)
+    - name: PolicyItem
+      description: Access rule within a policy defining user/group permissions
+    - name: User
+      description: User principal registered in Ranger
+    - name: Group
+      description: User group for bulk permission management
+    - name: AuditEntry
+      description: Record of an access event for compliance and security review
+    - name: SecurityZone
+      description: Logical security zone grouping resources and policies
+  actions:
+    - name: CreatePolicy
+      description: Define new access control policies for resources
+    - name: UpdatePolicy
+      description: Modify existing security policies
+    - name: Audit
+      description: Review access audit logs for compliance
+    - name: Manage
+      description: Manage users, groups, and services
+  authentication:
+    - name: Basic Auth
+      description: HTTP Basic authentication for API access
+    - name: Kerberos
+      description: Kerberos authentication for Hadoop integration
+capability:
+  workflows:
+    - name: Policy Management Workflow
+      description: End-to-end workflow for creating and managing security policies
+    - name: Audit Workflow
+      description: Workflow for reviewing access audit logs
+  personas:
+    - name: Security Administrator
+      description: Administrator managing access control policies
+    - name: Compliance Officer
+      description: Officer reviewing audit logs for compliance reporting
+    - name: Platform Engineer
+      description: Engineer integrating Ranger with Hadoop services
+  domains:
+    - name: Security
+      description: Access control and policy enforcement
+    - name: Compliance
+      description: Audit logging and regulatory compliance
+  crossReference:
+    - name: Apache Knox
+      description: API gateway with Ranger policy integration
+    - name: Apache Atlas
+      description: Data governance with Ranger policy enforcement
+    - name: Apache Sentry
+      description: Alternative Hadoop authorization framework

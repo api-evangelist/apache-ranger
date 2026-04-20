@@ -1,0 +1,17 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/apache-ranger/refs/heads/main/json-structure/apache-ranger-access-type-structure.json",
+  "description": "Access type in a policy item",
+  "type": "object",
+  "properties": {
+    "type": {
+      "type": "string",
+      "description": "Access type name (read, write, execute, etc.)"
+    },
+    "isAllowed": {
+      "type": "boolean",
+      "description": "Whether the access is allowed"
+    }
+  },
+  "name": "AccessType"
+}

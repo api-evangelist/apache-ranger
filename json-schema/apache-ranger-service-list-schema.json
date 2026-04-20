@@ -1,0 +1,18 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/apache-ranger/refs/heads/main/json-schema/apache-ranger-service-list-schema.json",
+  "title": "ServiceList",
+  "description": "List of Ranger services",
+  "type": "object",
+  "properties": {
+    "totalCount": {
+      "type": "integer"
+    },
+    "services": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/RangerService"
+      }
+    }
+  }
+}

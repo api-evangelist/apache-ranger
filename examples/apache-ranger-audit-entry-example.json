@@ -1,0 +1,14 @@
+{
+  "id": "500123",
+  "user": "example",
+  "resourceType": "example",
+  "resourcePath": "example",
+  "accessType": "example",
+  "result": 1234,
+  "aclEnforcer": "example",
+  "agentId": "500123",
+  "repoName": "example-name",
+  "sessionId": "500123",
+  "clientIP": "example",
+  "eventTime": "2026-04-19T10:00:00Z"
+}

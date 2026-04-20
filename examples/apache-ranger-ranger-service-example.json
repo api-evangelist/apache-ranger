@@ -1,0 +1,8 @@
+{
+  "id": 1234,
+  "name": "example-name",
+  "type": "example",
+  "description": "example",
+  "isEnabled": true,
+  "configs": {}
+}

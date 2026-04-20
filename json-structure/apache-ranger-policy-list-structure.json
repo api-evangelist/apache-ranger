@@ -1,0 +1,25 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/apache-ranger/refs/heads/main/json-structure/apache-ranger-policy-list-structure.json",
+  "description": "List of Ranger security policies",
+  "type": "object",
+  "properties": {
+    "totalCount": {
+      "type": "int32",
+      "description": "Total number of policies"
+    },
+    "pageSize": {
+      "type": "int32"
+    },
+    "resultSize": {
+      "type": "int32"
+    },
+    "policies": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/Policy"
+      }
+    }
+  },
+  "name": "PolicyList"
+}

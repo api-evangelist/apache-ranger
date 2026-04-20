@@ -1,0 +1,25 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/apache-ranger/refs/heads/main/json-schema/apache-ranger-policy-list-schema.json",
+  "title": "PolicyList",
+  "description": "List of Ranger security policies",
+  "type": "object",
+  "properties": {
+    "totalCount": {
+      "type": "integer",
+      "description": "Total number of policies"
+    },
+    "pageSize": {
+      "type": "integer"
+    },
+    "resultSize": {
+      "type": "integer"
+    },
+    "policies": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/Policy"
+      }
+    }
+  }
+}

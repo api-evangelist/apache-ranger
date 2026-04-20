@@ -1,0 +1,18 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/apache-ranger/refs/heads/main/json-schema/apache-ranger-group-list-schema.json",
+  "title": "GroupList",
+  "description": "List of Ranger groups",
+  "type": "object",
+  "properties": {
+    "totalCount": {
+      "type": "integer"
+    },
+    "groups": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/RangerGroup"
+      }
+    }
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/apache-ranger/refs/heads/main/json-structure/apache-ranger-user-list-structure.json",
+  "description": "List of Ranger users",
+  "type": "object",
+  "properties": {
+    "totalCount": {
+      "type": "int32"
+    },
+    "users": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/RangerUser"
+      }
+    }
+  },
+  "name": "UserList"
+}

@@ -1,0 +1,25 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/apache-ranger/refs/heads/main/json-schema/apache-ranger-ranger-group-schema.json",
+  "title": "RangerGroup",
+  "description": "Ranger user group",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "integer",
+      "description": "Group identifier"
+    },
+    "name": {
+      "type": "string",
+      "description": "Group name"
+    },
+    "description": {
+      "type": "string",
+      "description": "Group description"
+    },
+    "groupSource": {
+      "type": "integer",
+      "description": "Group source (0=internal, 1=LDAP/AD)"
+    }
+  }
+}

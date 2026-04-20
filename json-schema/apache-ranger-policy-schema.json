@@ -1,0 +1,50 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/apache-ranger/refs/heads/main/json-schema/apache-ranger-policy-schema.json",
+  "title": "Policy",
+  "description": "Ranger security policy definition",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "integer",
+      "description": "Policy identifier"
+    },
+    "name": {
+      "type": "string",
+      "description": "Policy name"
+    },
+    "serviceType": {
+      "type": "string",
+      "description": "Service type this policy applies to (hdfs, hive, hbase)"
+    },
+    "serviceName": {
+      "type": "string",
+      "description": "Service name this policy applies to"
+    },
+    "description": {
+      "type": "string",
+      "description": "Policy description"
+    },
+    "isEnabled": {
+      "type": "boolean",
+      "description": "Whether the policy is active"
+    },
+    "isAuditEnabled": {
+      "type": "boolean",
+      "description": "Whether audit logging is enabled"
+    },
+    "resources": {
+      "type": "object",
+      "description": "Resources protected by this policy",
+      "additionalProperties": {
+        "$ref": "#/components/schemas/PolicyResource"
+      }
+    },
+    "policyItems": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/PolicyItem"
+      }
+    }
+  }
+}

@@ -1,0 +1,189 @@
+{
+  "@context": {
+    "@version": 1.1,
+    "rang": "https://ranger.apache.org/schema/",
+    "schema": "https://schema.org/",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "PolicyList": "rang:PolicyList",
+    "Policy": "rang:Policy",
+    "PolicyResource": "rang:PolicyResource",
+    "PolicyItem": "rang:PolicyItem",
+    "AccessType": "rang:AccessType",
+    "ServiceList": "rang:ServiceList",
+    "RangerService": "rang:RangerService",
+    "UserList": "rang:UserList",
+    "RangerUser": "rang:RangerUser",
+    "GroupList": "rang:GroupList",
+    "RangerGroup": "rang:RangerGroup",
+    "AuditList": "rang:AuditList",
+    "AuditEntry": "rang:AuditEntry",
+    "totalCount": {
+      "@id": "rang:totalCount",
+      "@type": "xsd:integer"
+    },
+    "pageSize": {
+      "@id": "rang:pageSize",
+      "@type": "xsd:integer"
+    },
+    "resultSize": {
+      "@id": "rang:resultSize",
+      "@type": "xsd:integer"
+    },
+    "policies": {
+      "@id": "rang:policies",
+      "@container": "@set"
+    },
+    "id": {
+      "@id": "rang:id",
+      "@type": "xsd:integer"
+    },
+    "name": {
+      "@id": "rang:name",
+      "@type": "schema:name"
+    },
+    "serviceType": {
+      "@id": "rang:serviceType",
+      "@type": "xsd:string"
+    },
+    "serviceName": {
+      "@id": "rang:serviceName",
+      "@type": "xsd:string"
+    },
+    "description": {
+      "@id": "rang:description",
+      "@type": "schema:description"
+    },
+    "isEnabled": {
+      "@id": "rang:isEnabled",
+      "@type": "xsd:boolean"
+    },
+    "isAuditEnabled": {
+      "@id": "rang:isAuditEnabled",
+      "@type": "xsd:boolean"
+    },
+    "resources": {
+      "@id": "rang:resources",
+      "@type": "xsd:string"
+    },
+    "policyItems": {
+      "@id": "rang:policyItems",
+      "@container": "@set"
+    },
+    "values": {
+      "@id": "rang:values",
+      "@container": "@set"
+    },
+    "isRecursive": {
+      "@id": "rang:isRecursive",
+      "@type": "xsd:boolean"
+    },
+    "isExcludes": {
+      "@id": "rang:isExcludes",
+      "@type": "xsd:boolean"
+    },
+    "users": {
+      "@id": "rang:users",
+      "@container": "@set"
+    },
+    "groups": {
+      "@id": "rang:groups",
+      "@container": "@set"
+    },
+    "accesses": {
+      "@id": "rang:accesses",
+      "@container": "@set"
+    },
+    "conditions": {
+      "@id": "rang:conditions",
+      "@container": "@set"
+    },
+    "type": {
+      "@id": "rang:type",
+      "@type": "xsd:string"
+    },
+    "isAllowed": {
+      "@id": "rang:isAllowed",
+      "@type": "xsd:boolean"
+    },
+    "services": {
+      "@id": "rang:services",
+      "@container": "@set"
+    },
+    "configs": {
+      "@id": "rang:configs",
+      "@type": "xsd:string"
+    },
+    "firstName": {
+      "@id": "rang:firstName",
+      "@type": "xsd:string"
+    },
+    "lastName": {
+      "@id": "rang:lastName",
+      "@type": "xsd:string"
+    },
+    "emailAddress": {
+      "@id": "rang:emailAddress",
+      "@type": "xsd:string"
+    },
+    "userSource": {
+      "@id": "rang:userSource",
+      "@type": "xsd:integer"
+    },
+    "status": {
+      "@id": "rang:status",
+      "@type": "xsd:integer"
+    },
+    "groupSource": {
+      "@id": "rang:groupSource",
+      "@type": "xsd:integer"
+    },
+    "auditList": {
+      "@id": "rang:auditList",
+      "@container": "@set"
+    },
+    "user": {
+      "@id": "rang:user",
+      "@type": "xsd:string"
+    },
+    "resourceType": {
+      "@id": "rang:resourceType",
+      "@type": "xsd:string"
+    },
+    "resourcePath": {
+      "@id": "rang:resourcePath",
+      "@type": "xsd:string"
+    },
+    "accessType": {
+      "@id": "rang:accessType",
+      "@type": "xsd:string"
+    },
+    "result": {
+      "@id": "rang:result",
+      "@type": "xsd:integer"
+    },
+    "aclEnforcer": {
+      "@id": "rang:aclEnforcer",
+      "@type": "xsd:string"
+    },
+    "agentId": {
+      "@id": "rang:agentId",
+      "@type": "xsd:string"
+    },
+    "repoName": {
+      "@id": "rang:repoName",
+      "@type": "xsd:string"
+    },
+    "sessionId": {
+      "@id": "rang:sessionId",
+      "@type": "xsd:string"
+    },
+    "clientIP": {
+      "@id": "rang:clientIP",
+      "@type": "xsd:string"
+    },
+    "eventTime": {
+      "@id": "rang:eventTime",
+      "@type": "xsd:string"
+    }
+  }
+}

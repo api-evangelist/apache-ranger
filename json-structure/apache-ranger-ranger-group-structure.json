@@ -1,0 +1,25 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/apache-ranger/refs/heads/main/json-structure/apache-ranger-ranger-group-structure.json",
+  "description": "Ranger user group",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "int32",
+      "description": "Group identifier"
+    },
+    "name": {
+      "type": "string",
+      "description": "Group name"
+    },
+    "description": {
+      "type": "string",
+      "description": "Group description"
+    },
+    "groupSource": {
+      "type": "int32",
+      "description": "Group source (0=internal, 1=LDAP/AD)"
+    }
+  },
+  "name": "RangerGroup"
+}
