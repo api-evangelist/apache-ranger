@@ -54,7 +54,7 @@ common:
   url: vocabulary/apache-ranger-vocabulary.yaml
 - type: NaftikoCapability
   url: capabilities/ranger-workflow.yaml
-- type: JSON-LD
+- type: JSONLD
   url: json-ld/apache-ranger-context.jsonld
 - type: Features
   data:
