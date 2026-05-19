@@ -1,0 +1,71 @@
+naftiko: 1.0.0-alpha2
+info:
+  label: Apache Ranger REST API — Groups
+  description: 'Apache Ranger REST API — Groups. 1 operations. Lead operation: Apache Ranger List Groups. Self-contained Naftiko
+    capability covering one Apache Ranger business surface.'
+  tags:
+  - Apache Ranger
+  - Groups
+  created: '2026-05-19'
+  modified: '2026-05-19'
+binds:
+- namespace: env
+  keys:
+    APACHE_RANGER_API_KEY: APACHE_RANGER_API_KEY
+capability:
+  consumes:
+  - type: http
+    namespace: rest-groups
+    baseUri: https://ranger.example.com/service
+    description: Apache Ranger REST API — Groups business capability. Self-contained, no shared references.
+    resources:
+    - name: xusers-groups
+      path: /xusers/groups
+      operations:
+      - name: listgroups
+        method: GET
+        description: Apache Ranger List Groups
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    authentication:
+      type: basic
+      username: '{{env.APACHE_RANGER_USER}}'
+      password: '{{env.APACHE_RANGER_PASS}}'
+  exposes:
+  - type: rest
+    namespace: rest-groups-rest
+    port: 8080
+    description: REST adapter for Apache Ranger REST API — Groups. One Spectral-compliant resource per consumed operation,
+      prefixed with /v1.
+    resources:
+    - path: /v1/xusers/groups
+      name: xusers-groups
+      description: REST surface for xusers-groups.
+      operations:
+      - method: GET
+        name: listgroups
+        description: Apache Ranger List Groups
+        call: rest-groups.listgroups
+        outputParameters:
+        - type: object
+          mapping: $.
+  - type: mcp
+    namespace: rest-groups-mcp
+    port: 9090
+    transport: http
+    description: MCP adapter for Apache Ranger REST API — Groups. One tool per consumed operation, routed inline through this
+      capability's consumes block.
+    tools:
+    - name: apache-ranger-list-groups
+      description: Apache Ranger List Groups
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: rest-groups.listgroups
+      outputParameters:
+      - type: object
+        mapping: $.

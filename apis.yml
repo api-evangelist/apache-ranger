@@ -1,8 +1,7 @@
 aid: apache-ranger
 name: Apache Ranger
-description: >-
-  Apache Ranger is a framework to enable, monitor, and manage comprehensive data security across the Hadoop platform. It provides centralized security administration for fine-grained authorization policies
-  across Hadoop ecosystem components.
+description: Apache Ranger is a framework to enable, monitor, and manage comprehensive data security across the Hadoop platform.
+  It provides centralized security administration for fine-grained authorization policies across Hadoop ecosystem components.
 type: Index
 position: Consumer
 access: 3rd-Party
@@ -16,16 +15,15 @@ tags:
 - Apache
 - Open Source
 created: '2026-03-16'
-modified: '2026-04-19'
-url: >-
-  https://raw.githubusercontent.com/api-evangelist/apache-ranger/refs/heads/main/apis.yml
+modified: '2026-05-19'
+url: https://raw.githubusercontent.com/api-evangelist/apache-ranger/refs/heads/main/apis.yml
 specificationVersion: '0.19'
 apis:
 - aid: apache-ranger:apache-ranger-rest-api
   name: Apache Ranger REST API
-  description: >-
-    The Ranger REST API provides endpoints for policy management, service management, user/group management, audit log retrieval, and security zone administration, with plugin APIs for enforcing policies
-    in HDFS, Hive, HBase, and other services.
+  description: The Ranger REST API provides endpoints for policy management, service management, user/group management, audit
+    log retrieval, and security zone administration, with plugin APIs for enforcing policies in HDFS, Hive, HBase, and other
+    services.
   humanURL: https://ranger.apache.org/apidocs/index.html
   tags:
   - Access Control
@@ -40,6 +38,16 @@ apis:
     url: https://ranger.apache.org/
   - type: OpenAPI
     url: openapi/apache-ranger-rest-api.yaml
+  - type: NaftikoCapability
+    url: capabilities/rest-audit.yaml
+  - type: NaftikoCapability
+    url: capabilities/rest-groups.yaml
+  - type: NaftikoCapability
+    url: capabilities/rest-policies.yaml
+  - type: NaftikoCapability
+    url: capabilities/rest-services.yaml
+  - type: NaftikoCapability
+    url: capabilities/rest-users.yaml
 maintainers:
 - FN: Kin Lane
   email: info@apievangelist.com
@@ -52,8 +60,6 @@ common:
   url: rules/apache-ranger-spectral-rules.yml
 - type: Vocabulary
   url: vocabulary/apache-ranger-vocabulary.yaml
-- type: NaftikoCapability
-  url: capabilities/ranger-workflow.yaml
 - type: JSONLD
   url: json-ld/apache-ranger-context.jsonld
 - type: Features
