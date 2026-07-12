@@ -52,6 +52,12 @@ maintainers:
 - FN: Kin Lane
   email: info@apievangelist.com
 common:
+- type: VulnerabilityDisclosure
+  url: security/apache-ranger-vulnerability-disclosure.yml
+- type: DomainSecurity
+  url: security/apache-ranger-domain-security.yml
+- type: Authentication
+  url: authentication/apache-ranger-authentication.yml
 - type: GitHubOrganization
   url: https://github.com/apache/ranger
 - type: Documentation
