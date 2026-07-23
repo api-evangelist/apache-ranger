@@ -1,0 +1,67 @@
+openapi: 3.0.3
+info:
+  title: Apache Ranger REST Audit Groups API
+  description: Apache Ranger provides centralized security administration and policy management for Hadoop ecosystem services. This API covers policy management, service definitions, audit logs, user/group management, and security zones.
+  version: 2.4.0
+  contact:
+    name: Apache Ranger
+    url: https://ranger.apache.org/
+  license:
+    name: Apache 2.0
+    url: https://www.apache.org/licenses/LICENSE-2.0
+servers:
+- url: https://ranger.example.com/service
+  description: Apache Ranger Policy Manager
+security:
+- basicAuth: []
+tags:
+- name: Groups
+paths:
+  /xusers/groups:
+    get:
+      operationId: listGroups
+      summary: Apache Ranger List Groups
+      description: List all user groups in Ranger.
+      tags:
+      - Groups
+      x-microcks-operation:
+        dispatcher: RANDOM
+      responses:
+        '200':
+          description: List of groups
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GroupList'
+components:
+  schemas:
+    RangerGroup:
+      type: object
+      description: Ranger user group
+      properties:
+        id:
+          type: integer
+          description: Group identifier
+        name:
+          type: string
+          description: Group name
+        description:
+          type: string
+          description: Group description
+        groupSource:
+          type: integer
+          description: Group source (0=internal, 1=LDAP/AD)
+    GroupList:
+      type: object
+      description: List of Ranger groups
+      properties:
+        totalCount:
+          type: integer
+        groups:
+          type: array
+          items:
+            $ref: '#/components/schemas/RangerGroup'
+  securitySchemes:
+    basicAuth:
+      type: http
+      scheme: basic

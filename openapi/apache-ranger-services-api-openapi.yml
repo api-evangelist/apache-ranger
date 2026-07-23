@@ -1,0 +1,137 @@
+openapi: 3.0.3
+info:
+  title: Apache Ranger REST Audit Services API
+  description: Apache Ranger provides centralized security administration and policy management for Hadoop ecosystem services. This API covers policy management, service definitions, audit logs, user/group management, and security zones.
+  version: 2.4.0
+  contact:
+    name: Apache Ranger
+    url: https://ranger.apache.org/
+  license:
+    name: Apache 2.0
+    url: https://www.apache.org/licenses/LICENSE-2.0
+servers:
+- url: https://ranger.example.com/service
+  description: Apache Ranger Policy Manager
+security:
+- basicAuth: []
+tags:
+- name: Services
+paths:
+  /plugins/services:
+    get:
+      operationId: listServices
+      summary: Apache Ranger List Services
+      description: List all registered services in Ranger.
+      tags:
+      - Services
+      x-microcks-operation:
+        dispatcher: RANDOM
+      responses:
+        '200':
+          description: List of services
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ServiceList'
+    post:
+      operationId: createService
+      summary: Apache Ranger Create Service
+      description: Register a new service with Ranger for policy management.
+      tags:
+      - Services
+      x-microcks-operation:
+        dispatcher: RANDOM
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/RangerService'
+      responses:
+        '200':
+          description: Service created
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/RangerService'
+  /plugins/services/{id}:
+    get:
+      operationId: getService
+      summary: Apache Ranger Get Service
+      description: Retrieve details of a specific Ranger service.
+      tags:
+      - Services
+      x-microcks-operation:
+        dispatcher: URI_PARTS
+        dispatcherRules: id
+      parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: integer
+      responses:
+        '200':
+          description: Service details
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/RangerService'
+    delete:
+      operationId: deleteService
+      summary: Apache Ranger Delete Service
+      description: Remove a service from Ranger management.
+      tags:
+      - Services
+      x-microcks-operation:
+        dispatcher: URI_PARTS
+        dispatcherRules: id
+      parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: integer
+      responses:
+        '204':
+          description: Service deleted
+components:
+  schemas:
+    ServiceList:
+      type: object
+      description: List of Ranger services
+      properties:
+        totalCount:
+          type: integer
+        services:
+          type: array
+          items:
+            $ref: '#/components/schemas/RangerService'
+    RangerService:
+      type: object
+      description: Ranger service definition
+      properties:
+        id:
+          type: integer
+          description: Service identifier
+        name:
+          type: string
+          description: Service name
+        type:
+          type: string
+          description: Service type (hdfs, hive, hbase, kafka, etc.)
+        description:
+          type: string
+          description: Service description
+        isEnabled:
+          type: boolean
+          description: Whether the service is active
+        configs:
+          type: object
+          description: Service connection configuration
+          additionalProperties:
+            type: string
+  securitySchemes:
+    basicAuth:
+      type: http
+      scheme: basic

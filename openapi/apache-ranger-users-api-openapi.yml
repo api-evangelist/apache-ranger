@@ -1,0 +1,94 @@
+openapi: 3.0.3
+info:
+  title: Apache Ranger REST Audit Users API
+  description: Apache Ranger provides centralized security administration and policy management for Hadoop ecosystem services. This API covers policy management, service definitions, audit logs, user/group management, and security zones.
+  version: 2.4.0
+  contact:
+    name: Apache Ranger
+    url: https://ranger.apache.org/
+  license:
+    name: Apache 2.0
+    url: https://www.apache.org/licenses/LICENSE-2.0
+servers:
+- url: https://ranger.example.com/service
+  description: Apache Ranger Policy Manager
+security:
+- basicAuth: []
+tags:
+- name: Users
+paths:
+  /xusers/users:
+    get:
+      operationId: listUsers
+      summary: Apache Ranger List Users
+      description: List all users registered in Ranger.
+      tags:
+      - Users
+      x-microcks-operation:
+        dispatcher: RANDOM
+      responses:
+        '200':
+          description: List of users
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/UserList'
+    post:
+      operationId: createUser
+      summary: Apache Ranger Create User
+      description: Create a new user in Ranger.
+      tags:
+      - Users
+      x-microcks-operation:
+        dispatcher: RANDOM
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/RangerUser'
+      responses:
+        '200':
+          description: User created
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/RangerUser'
+components:
+  schemas:
+    RangerUser:
+      type: object
+      description: Ranger user definition
+      properties:
+        id:
+          type: integer
+          description: User identifier
+        name:
+          type: string
+          description: Username
+        firstName:
+          type: string
+        lastName:
+          type: string
+        emailAddress:
+          type: string
+        userSource:
+          type: integer
+          description: User source (0=internal, 1=LDAP/AD)
+        status:
+          type: integer
+          description: User status (1=active, 0=disabled)
+    UserList:
+      type: object
+      description: List of Ranger users
+      properties:
+        totalCount:
+          type: integer
+        users:
+          type: array
+          items:
+            $ref: '#/components/schemas/RangerUser'
+  securitySchemes:
+    basicAuth:
+      type: http
+      scheme: basic

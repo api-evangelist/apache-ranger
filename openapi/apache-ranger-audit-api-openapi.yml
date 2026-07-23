@@ -1,0 +1,111 @@
+openapi: 3.0.3
+info:
+  title: Apache Ranger REST Audit API
+  description: Apache Ranger provides centralized security administration and policy management for Hadoop ecosystem services. This API covers policy management, service definitions, audit logs, user/group management, and security zones.
+  version: 2.4.0
+  contact:
+    name: Apache Ranger
+    url: https://ranger.apache.org/
+  license:
+    name: Apache 2.0
+    url: https://www.apache.org/licenses/LICENSE-2.0
+servers:
+- url: https://ranger.example.com/service
+  description: Apache Ranger Policy Manager
+security:
+- basicAuth: []
+tags:
+- name: Audit
+paths:
+  /audit/access:
+    get:
+      operationId: getAccessAudit
+      summary: Apache Ranger Get Access Audit
+      description: Retrieve access audit logs showing who accessed what resources.
+      tags:
+      - Audit
+      x-microcks-operation:
+        dispatcher: RANDOM
+      parameters:
+      - name: startDate
+        in: query
+        schema:
+          type: string
+          format: date-time
+      - name: endDate
+        in: query
+        schema:
+          type: string
+          format: date-time
+      - name: user
+        in: query
+        schema:
+          type: string
+      - name: resource
+        in: query
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Audit log entries
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/AuditList'
+components:
+  schemas:
+    AuditEntry:
+      type: object
+      description: Single access audit log entry
+      properties:
+        id:
+          type: string
+          description: Audit entry identifier
+        user:
+          type: string
+          description: User who accessed the resource
+        resourceType:
+          type: string
+          description: Type of resource accessed
+        resourcePath:
+          type: string
+          description: Path of the accessed resource
+        accessType:
+          type: string
+          description: Type of access (read, write, etc.)
+        result:
+          type: integer
+          description: Access result (1=allowed, 0=denied)
+        aclEnforcer:
+          type: string
+          description: ACL enforcer that made the decision
+        agentId:
+          type: string
+          description: Agent/plugin that reported the audit
+        repoName:
+          type: string
+          description: Repository/service name
+        sessionId:
+          type: string
+          description: Session identifier
+        clientIP:
+          type: string
+          description: Client IP address
+        eventTime:
+          type: string
+          format: date-time
+          description: Time of access event
+    AuditList:
+      type: object
+      description: Access audit log entries
+      properties:
+        totalCount:
+          type: integer
+        auditList:
+          type: array
+          items:
+            $ref: '#/components/schemas/AuditEntry'
+  securitySchemes:
+    basicAuth:
+      type: http
+      scheme: basic
