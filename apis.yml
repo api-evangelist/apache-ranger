@@ -3,9 +3,22 @@ name: Apache Ranger
 description: Apache Ranger is a framework to enable, monitor, and manage comprehensive data security across the Hadoop platform.
   It provides centralized security administration for fine-grained authorization policies across Hadoop ecosystem components.
 type: Index
+accessModel:
+  pricing: freemium
+  onboarding: self-serve
+  trial: false
+  try_now: true
+  public: false
+  label: Freemium · Self-serve signup
+  confidence: high
+  source:
+  - plans
+  - authentication
+  generated: '2026-07-22'
+  method: derived
 position: Consumer
 access: 3rd-Party
-image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/apache-ranger.png
 tags:
 - Access Control
 - Authorization
@@ -19,25 +32,111 @@ modified: '2026-05-19'
 url: https://raw.githubusercontent.com/api-evangelist/apache-ranger/refs/heads/main/apis.yml
 specificationVersion: '0.19'
 apis:
-- aid: apache-ranger:apache-ranger-rest-api
-  name: Apache Ranger REST API
-  description: The Ranger REST API provides endpoints for policy management, service management, user/group management, audit
-    log retrieval, and security zone administration, with plugin APIs for enforcing policies in HDFS, Hive, HBase, and other
-    services.
+- aid: apache-ranger:apache-ranger-audit-api
+  name: Apache Ranger Audit API
+  description: The Audit API from Apache Ranger — 1 operation(s) for audit.
   humanURL: https://ranger.apache.org/apidocs/index.html
   tags:
-  - Access Control
-  - Policy Management
-  - REST
-  - Apache
-  - Open Source
+  - Audit
   properties:
+  - type: OpenAPI
+    url: openapi/apache-ranger-audit-api-openapi.yml
   - type: Documentation
     url: https://ranger.apache.org/apidocs/index.html
   - type: Documentation
     url: https://ranger.apache.org/
+  - type: X-NaftikoCapability
+    url: capabilities/rest-audit.yaml
+  - type: X-NaftikoCapability
+    url: capabilities/rest-groups.yaml
+  - type: X-NaftikoCapability
+    url: capabilities/rest-policies.yaml
+  - type: X-NaftikoCapability
+    url: capabilities/rest-services.yaml
+  - type: X-NaftikoCapability
+    url: capabilities/rest-users.yaml
+- aid: apache-ranger:apache-ranger-groups-api
+  name: Apache Ranger Groups API
+  description: The Groups API from Apache Ranger — 1 operation(s) for groups.
+  humanURL: https://ranger.apache.org/apidocs/index.html
+  tags:
+  - Groups
+  properties:
   - type: OpenAPI
-    url: openapi/apache-ranger-rest-api.yaml
+    url: openapi/apache-ranger-groups-api-openapi.yml
+  - type: Documentation
+    url: https://ranger.apache.org/apidocs/index.html
+  - type: Documentation
+    url: https://ranger.apache.org/
+  - type: X-NaftikoCapability
+    url: capabilities/rest-audit.yaml
+  - type: X-NaftikoCapability
+    url: capabilities/rest-groups.yaml
+  - type: X-NaftikoCapability
+    url: capabilities/rest-policies.yaml
+  - type: X-NaftikoCapability
+    url: capabilities/rest-services.yaml
+  - type: X-NaftikoCapability
+    url: capabilities/rest-users.yaml
+- aid: apache-ranger:apache-ranger-policies-api
+  name: Apache Ranger Policies API
+  description: The Policies API from Apache Ranger — 2 operation(s) for policies.
+  humanURL: https://ranger.apache.org/apidocs/index.html
+  tags:
+  - Policies
+  properties:
+  - type: OpenAPI
+    url: openapi/apache-ranger-policies-api-openapi.yml
+  - type: Documentation
+    url: https://ranger.apache.org/apidocs/index.html
+  - type: Documentation
+    url: https://ranger.apache.org/
+  - type: X-NaftikoCapability
+    url: capabilities/rest-audit.yaml
+  - type: X-NaftikoCapability
+    url: capabilities/rest-groups.yaml
+  - type: X-NaftikoCapability
+    url: capabilities/rest-policies.yaml
+  - type: X-NaftikoCapability
+    url: capabilities/rest-services.yaml
+  - type: X-NaftikoCapability
+    url: capabilities/rest-users.yaml
+- aid: apache-ranger:apache-ranger-services-api
+  name: Apache Ranger Services API
+  description: The Services API from Apache Ranger — 2 operation(s) for services.
+  humanURL: https://ranger.apache.org/apidocs/index.html
+  tags:
+  - Services
+  properties:
+  - type: OpenAPI
+    url: openapi/apache-ranger-services-api-openapi.yml
+  - type: Documentation
+    url: https://ranger.apache.org/apidocs/index.html
+  - type: Documentation
+    url: https://ranger.apache.org/
+  - type: X-NaftikoCapability
+    url: capabilities/rest-audit.yaml
+  - type: X-NaftikoCapability
+    url: capabilities/rest-groups.yaml
+  - type: X-NaftikoCapability
+    url: capabilities/rest-policies.yaml
+  - type: X-NaftikoCapability
+    url: capabilities/rest-services.yaml
+  - type: X-NaftikoCapability
+    url: capabilities/rest-users.yaml
+- aid: apache-ranger:apache-ranger-users-api
+  name: Apache Ranger Users API
+  description: The Users API from Apache Ranger — 1 operation(s) for users.
+  humanURL: https://ranger.apache.org/apidocs/index.html
+  tags:
+  - Users
+  properties:
+  - type: OpenAPI
+    url: openapi/apache-ranger-users-api-openapi.yml
+  - type: Documentation
+    url: https://ranger.apache.org/apidocs/index.html
+  - type: Documentation
+    url: https://ranger.apache.org/
   - type: X-NaftikoCapability
     url: capabilities/rest-audit.yaml
   - type: X-NaftikoCapability
