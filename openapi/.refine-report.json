@@ -1,0 +1,22 @@
+{
+  "provider": "apache-ranger",
+  "sources": [
+    "apache-ranger-audit-api-openapi.yml",
+    "apache-ranger-groups-api-openapi.yml",
+    "apache-ranger-policies-api-openapi.yml",
+    "apache-ranger-services-api-openapi.yml",
+    "apache-ranger-users-api-openapi.yml"
+  ],
+  "outputs": [
+    "apache-ranger-audit-api-openapi.yml",
+    "apache-ranger-groups-api-openapi.yml",
+    "apache-ranger-policies-api-openapi.yml",
+    "apache-ranger-services-api-openapi.yml",
+    "apache-ranger-users-api-openapi.yml"
+  ],
+  "archived": [],
+  "errors": [],
+  "warnings": [],
+  "notes": [],
+  "skipped": []
+}
