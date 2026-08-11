@@ -45,16 +45,6 @@ apis:
     url: https://ranger.apache.org/apidocs/index.html
   - type: Documentation
     url: https://ranger.apache.org/
-  - type: X-NaftikoCapability
-    url: capabilities/rest-audit.yaml
-  - type: X-NaftikoCapability
-    url: capabilities/rest-groups.yaml
-  - type: X-NaftikoCapability
-    url: capabilities/rest-policies.yaml
-  - type: X-NaftikoCapability
-    url: capabilities/rest-services.yaml
-  - type: X-NaftikoCapability
-    url: capabilities/rest-users.yaml
 - aid: apache-ranger:apache-ranger-groups-api
   name: Apache Ranger Groups API
   description: The Groups API from Apache Ranger — 1 operation(s) for groups.
@@ -68,16 +58,6 @@ apis:
     url: https://ranger.apache.org/apidocs/index.html
   - type: Documentation
     url: https://ranger.apache.org/
-  - type: X-NaftikoCapability
-    url: capabilities/rest-audit.yaml
-  - type: X-NaftikoCapability
-    url: capabilities/rest-groups.yaml
-  - type: X-NaftikoCapability
-    url: capabilities/rest-policies.yaml
-  - type: X-NaftikoCapability
-    url: capabilities/rest-services.yaml
-  - type: X-NaftikoCapability
-    url: capabilities/rest-users.yaml
 - aid: apache-ranger:apache-ranger-policies-api
   name: Apache Ranger Policies API
   description: The Policies API from Apache Ranger — 2 operation(s) for policies.
@@ -91,16 +71,6 @@ apis:
     url: https://ranger.apache.org/apidocs/index.html
   - type: Documentation
     url: https://ranger.apache.org/
-  - type: X-NaftikoCapability
-    url: capabilities/rest-audit.yaml
-  - type: X-NaftikoCapability
-    url: capabilities/rest-groups.yaml
-  - type: X-NaftikoCapability
-    url: capabilities/rest-policies.yaml
-  - type: X-NaftikoCapability
-    url: capabilities/rest-services.yaml
-  - type: X-NaftikoCapability
-    url: capabilities/rest-users.yaml
 - aid: apache-ranger:apache-ranger-services-api
   name: Apache Ranger Services API
   description: The Services API from Apache Ranger — 2 operation(s) for services.
@@ -114,16 +84,6 @@ apis:
     url: https://ranger.apache.org/apidocs/index.html
   - type: Documentation
     url: https://ranger.apache.org/
-  - type: X-NaftikoCapability
-    url: capabilities/rest-audit.yaml
-  - type: X-NaftikoCapability
-    url: capabilities/rest-groups.yaml
-  - type: X-NaftikoCapability
-    url: capabilities/rest-policies.yaml
-  - type: X-NaftikoCapability
-    url: capabilities/rest-services.yaml
-  - type: X-NaftikoCapability
-    url: capabilities/rest-users.yaml
 - aid: apache-ranger:apache-ranger-users-api
   name: Apache Ranger Users API
   description: The Users API from Apache Ranger — 1 operation(s) for users.
@@ -137,16 +97,6 @@ apis:
     url: https://ranger.apache.org/apidocs/index.html
   - type: Documentation
     url: https://ranger.apache.org/
-  - type: X-NaftikoCapability
-    url: capabilities/rest-audit.yaml
-  - type: X-NaftikoCapability
-    url: capabilities/rest-groups.yaml
-  - type: X-NaftikoCapability
-    url: capabilities/rest-policies.yaml
-  - type: X-NaftikoCapability
-    url: capabilities/rest-services.yaml
-  - type: X-NaftikoCapability
-    url: capabilities/rest-users.yaml
 maintainers:
 - FN: Kin Lane
   email: info@apievangelist.com
