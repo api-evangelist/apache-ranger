@@ -1,0 +1,125 @@
+{
+  "item": [
+    {
+      "id": "3e6854e9-88f2-4427-95d7-0a603eba5b4c",
+      "name": "Groups",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "d1c86a03-23fa-4c0a-9979-6f76c878a36e",
+          "name": "Apache Ranger List Groups",
+          "request": {
+            "name": "Apache Ranger List Groups",
+            "description": {
+              "content": "List all user groups in Ranger.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "xusers",
+                "groups"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "264dbe87-a756-4964-877a-424e4eaf8166",
+              "name": "List of groups",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "xusers",
+                    "groups"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: basic",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Basic <credentials>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"totalCount\": 6716,\n  \"groups\": [\n    {\n      \"id\": 6057,\n      \"name\": \"string\",\n      \"description\": \"string\",\n      \"groupSource\": 9093\n    },\n    {\n      \"id\": 9586,\n      \"name\": \"string\",\n      \"description\": \"string\",\n      \"groupSource\": 5831\n    }\n  ]\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://ranger.example.com/service",
+      "key": "baseUrl"
+    }
+  ],
+  "auth": {
+    "type": "basic",
+    "basic": [
+      {
+        "key": "username",
+        "value": "{{basicAuthUsername}}"
+      },
+      {
+        "key": "password",
+        "value": "{{basicAuthPassword}}"
+      }
+    ]
+  },
+  "info": {
+    "_postman_id": "de457bdc-22ea-4afd-9db9-9206599281c6",
+    "name": "Apache Ranger REST Audit Groups API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Apache Ranger provides centralized security administration and policy management for Hadoop ecosystem services. This API covers policy management, service definitions, audit logs, user/group management, and security zones.\n\nContact Support:\n Name: Apache Ranger",
+      "type": "text/plain"
+    }
+  }
+}

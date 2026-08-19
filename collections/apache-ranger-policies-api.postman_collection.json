@@ -1,0 +1,552 @@
+{
+  "item": [
+    {
+      "id": "8a2223b6-624e-4542-a630-f05f42895187",
+      "name": "Policies",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "a6de7e43-a479-4d31-bbb3-95f6624e2787",
+          "name": "Apache Ranger List Policies",
+          "request": {
+            "name": "Apache Ranger List Policies",
+            "description": {
+              "content": "List all security policies managed by Ranger.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "plugins",
+                "policies"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "serviceType",
+                  "value": "<string>",
+                  "description": "Filter by service type (hdfs, hive, hbase, etc.)"
+                },
+                {
+                  "disabled": false,
+                  "key": "serviceName",
+                  "value": "<string>"
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "17eca86a-7062-4d79-8144-da08d4191a1b",
+              "name": "List of policies",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "plugins",
+                    "policies"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "serviceType",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "serviceName",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: basic",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Basic <credentials>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"totalCount\": 7680,\n  \"pageSize\": 9400,\n  \"resultSize\": 1408,\n  \"policies\": [\n    {\n      \"id\": 5608,\n      \"name\": \"string\",\n      \"serviceType\": \"string\",\n      \"serviceName\": \"string\",\n      \"description\": \"string\",\n      \"isEnabled\": false,\n      \"isAuditEnabled\": true,\n      \"resources\": {\n        \"key_0\": {\n          \"values\": [\n            \"string\",\n            \"string\"\n          ],\n          \"isRecursive\": false,\n          \"isExcludes\": true\n        }\n      },\n      \"policyItems\": [\n        {\n          \"users\": [\n            \"string\",\n            \"string\"\n          ],\n          \"groups\": [\n            \"string\",\n            \"string\"\n          ],\n          \"accesses\": [\n            {\n              \"type\": {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              },\n              \"isAllowed\": {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              }\n            },\n            {\n              \"type\": {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              },\n              \"isAllowed\": {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              }\n            }\n          ],\n          \"conditions\": [\n            \"string\",\n            \"string\"\n          ]\n        },\n        {\n          \"users\": [\n            \"string\",\n            \"string\"\n          ],\n          \"groups\": [\n            \"string\",\n            \"string\"\n          ],\n          \"accesses\": [\n            {\n              \"type\": {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              },\n              \"isAllowed\": {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              }\n            },\n            {\n              \"type\": {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              },\n              \"isAllowed\": {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              }\n            }\n          ],\n          \"conditions\": [\n            \"string\",\n            \"string\"\n          ]\n        }\n      ]\n    },\n    {\n      \"id\": 2168,\n      \"name\": \"string\",\n      \"serviceType\": \"string\",\n      \"serviceName\": \"string\",\n      \"description\": \"string\",\n      \"isEnabled\": true,\n      \"isAuditEnabled\": true,\n      \"resources\": {\n        \"key_0\": {\n          \"values\": [\n            \"string\",\n            \"string\"\n          ],\n          \"isRecursive\": true,\n          \"isExcludes\": false\n        }\n      },\n      \"policyItems\": [\n        {\n          \"users\": [\n            \"string\",\n            \"string\"\n          ],\n          \"groups\": [\n            \"string\",\n            \"string\"\n          ],\n          \"accesses\": [\n            {\n              \"type\": {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              },\n              \"isAllowed\": {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              }\n            },\n            {\n              \"type\": {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              },\n              \"isAllowed\": {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              }\n            }\n          ],\n          \"conditions\": [\n            \"string\",\n            \"string\"\n          ]\n        },\n        {\n          \"users\": [\n            \"string\",\n            \"string\"\n          ],\n          \"groups\": [\n            \"string\",\n            \"string\"\n          ],\n          \"accesses\": [\n            {\n              \"type\": {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              },\n              \"isAllowed\": {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              }\n            },\n            {\n              \"type\": {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              },\n              \"isAllowed\": {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              }\n            }\n          ],\n          \"conditions\": [\n            \"string\",\n            \"string\"\n          ]\n        }\n      ]\n    }\n  ]\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "9cd6586b-47cf-416b-a75d-c0cc1250b7cc",
+          "name": "Apache Ranger Create Policy",
+          "request": {
+            "name": "Apache Ranger Create Policy",
+            "description": {
+              "content": "Create a new security policy in Ranger.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "plugins",
+                "policies"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"id\": \"<integer>\",\n  \"name\": \"<string>\",\n  \"serviceType\": \"<string>\",\n  \"serviceName\": \"<string>\",\n  \"description\": \"<string>\",\n  \"isEnabled\": \"<boolean>\",\n  \"isAuditEnabled\": \"<boolean>\",\n  \"resources\": {\n    \"key_0\": {\n      \"values\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"isRecursive\": \"<boolean>\",\n      \"isExcludes\": \"<boolean>\"\n    },\n    \"key_1\": {\n      \"values\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"isRecursive\": \"<boolean>\",\n      \"isExcludes\": \"<boolean>\"\n    }\n  },\n  \"policyItems\": [\n    {\n      \"users\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"groups\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"accesses\": [\n        {\n          \"type\": \"<string>\",\n          \"isAllowed\": \"<boolean>\"\n        },\n        {\n          \"type\": \"<string>\",\n          \"isAllowed\": \"<boolean>\"\n        }\n      ],\n      \"conditions\": [\n        \"<string>\",\n        \"<string>\"\n      ]\n    },\n    {\n      \"users\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"groups\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"accesses\": [\n        {\n          \"type\": \"<string>\",\n          \"isAllowed\": \"<boolean>\"\n        },\n        {\n          \"type\": \"<string>\",\n          \"isAllowed\": \"<boolean>\"\n        }\n      ],\n      \"conditions\": [\n        \"<string>\",\n        \"<string>\"\n      ]\n    }\n  ]\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "d45a77db-1d18-4a19-a8c0-c0e47d51de40",
+              "name": "Policy created",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "plugins",
+                    "policies"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: basic",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Basic <credentials>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"id\": \"<integer>\",\n  \"name\": \"<string>\",\n  \"serviceType\": \"<string>\",\n  \"serviceName\": \"<string>\",\n  \"description\": \"<string>\",\n  \"isEnabled\": \"<boolean>\",\n  \"isAuditEnabled\": \"<boolean>\",\n  \"resources\": {\n    \"key_0\": {\n      \"values\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"isRecursive\": \"<boolean>\",\n      \"isExcludes\": \"<boolean>\"\n    },\n    \"key_1\": {\n      \"values\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"isRecursive\": \"<boolean>\",\n      \"isExcludes\": \"<boolean>\"\n    }\n  },\n  \"policyItems\": [\n    {\n      \"users\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"groups\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"accesses\": [\n        {\n          \"type\": \"<string>\",\n          \"isAllowed\": \"<boolean>\"\n        },\n        {\n          \"type\": \"<string>\",\n          \"isAllowed\": \"<boolean>\"\n        }\n      ],\n      \"conditions\": [\n        \"<string>\",\n        \"<string>\"\n      ]\n    },\n    {\n      \"users\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"groups\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"accesses\": [\n        {\n          \"type\": \"<string>\",\n          \"isAllowed\": \"<boolean>\"\n        },\n        {\n          \"type\": \"<string>\",\n          \"isAllowed\": \"<boolean>\"\n        }\n      ],\n      \"conditions\": [\n        \"<string>\",\n        \"<string>\"\n      ]\n    }\n  ]\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"id\": \"<integer>\",\n  \"name\": \"<string>\",\n  \"serviceType\": \"<string>\",\n  \"serviceName\": \"<string>\",\n  \"description\": \"<string>\",\n  \"isEnabled\": \"<boolean>\",\n  \"isAuditEnabled\": \"<boolean>\",\n  \"resources\": {\n    \"key_0\": {\n      \"values\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"isRecursive\": \"<boolean>\",\n      \"isExcludes\": \"<boolean>\"\n    },\n    \"key_1\": {\n      \"values\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"isRecursive\": \"<boolean>\",\n      \"isExcludes\": \"<boolean>\"\n    }\n  },\n  \"policyItems\": [\n    {\n      \"users\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"groups\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"accesses\": [\n        {\n          \"type\": \"<string>\",\n          \"isAllowed\": \"<boolean>\"\n        },\n        {\n          \"type\": \"<string>\",\n          \"isAllowed\": \"<boolean>\"\n        }\n      ],\n      \"conditions\": [\n        \"<string>\",\n        \"<string>\"\n      ]\n    },\n    {\n      \"users\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"groups\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"accesses\": [\n        {\n          \"type\": \"<string>\",\n          \"isAllowed\": \"<boolean>\"\n        },\n        {\n          \"type\": \"<string>\",\n          \"isAllowed\": \"<boolean>\"\n        }\n      ],\n      \"conditions\": [\n        \"<string>\",\n        \"<string>\"\n      ]\n    }\n  ]\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "750f7cc9-0f8b-4dfe-9553-af6abc1935b2",
+          "name": "Apache Ranger Get Policy",
+          "request": {
+            "name": "Apache Ranger Get Policy",
+            "description": {
+              "content": "Retrieve a specific security policy by ID.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "plugins",
+                "policies",
+                ":id"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<integer>",
+                  "key": "id",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "5bab1ee9-e1cc-498e-b6ec-47dfbbeaf456",
+              "name": "Policy details",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "plugins",
+                    "policies",
+                    ":id"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<integer>",
+                      "key": "id",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: basic",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Basic <credentials>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"id\": \"<integer>\",\n  \"name\": \"<string>\",\n  \"serviceType\": \"<string>\",\n  \"serviceName\": \"<string>\",\n  \"description\": \"<string>\",\n  \"isEnabled\": \"<boolean>\",\n  \"isAuditEnabled\": \"<boolean>\",\n  \"resources\": {\n    \"key_0\": {\n      \"values\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"isRecursive\": \"<boolean>\",\n      \"isExcludes\": \"<boolean>\"\n    },\n    \"key_1\": {\n      \"values\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"isRecursive\": \"<boolean>\",\n      \"isExcludes\": \"<boolean>\"\n    }\n  },\n  \"policyItems\": [\n    {\n      \"users\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"groups\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"accesses\": [\n        {\n          \"type\": \"<string>\",\n          \"isAllowed\": \"<boolean>\"\n        },\n        {\n          \"type\": \"<string>\",\n          \"isAllowed\": \"<boolean>\"\n        }\n      ],\n      \"conditions\": [\n        \"<string>\",\n        \"<string>\"\n      ]\n    },\n    {\n      \"users\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"groups\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"accesses\": [\n        {\n          \"type\": \"<string>\",\n          \"isAllowed\": \"<boolean>\"\n        },\n        {\n          \"type\": \"<string>\",\n          \"isAllowed\": \"<boolean>\"\n        }\n      ],\n      \"conditions\": [\n        \"<string>\",\n        \"<string>\"\n      ]\n    }\n  ]\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "4ff25e20-068c-40b6-9ca4-ecfa50a65e26",
+          "name": "Apache Ranger Update Policy",
+          "request": {
+            "name": "Apache Ranger Update Policy",
+            "description": {
+              "content": "Update an existing security policy.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "plugins",
+                "policies",
+                ":id"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<integer>",
+                  "key": "id",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "PUT",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"id\": \"<integer>\",\n  \"name\": \"<string>\",\n  \"serviceType\": \"<string>\",\n  \"serviceName\": \"<string>\",\n  \"description\": \"<string>\",\n  \"isEnabled\": \"<boolean>\",\n  \"isAuditEnabled\": \"<boolean>\",\n  \"resources\": {\n    \"key_0\": {\n      \"values\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"isRecursive\": \"<boolean>\",\n      \"isExcludes\": \"<boolean>\"\n    },\n    \"key_1\": {\n      \"values\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"isRecursive\": \"<boolean>\",\n      \"isExcludes\": \"<boolean>\"\n    }\n  },\n  \"policyItems\": [\n    {\n      \"users\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"groups\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"accesses\": [\n        {\n          \"type\": \"<string>\",\n          \"isAllowed\": \"<boolean>\"\n        },\n        {\n          \"type\": \"<string>\",\n          \"isAllowed\": \"<boolean>\"\n        }\n      ],\n      \"conditions\": [\n        \"<string>\",\n        \"<string>\"\n      ]\n    },\n    {\n      \"users\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"groups\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"accesses\": [\n        {\n          \"type\": \"<string>\",\n          \"isAllowed\": \"<boolean>\"\n        },\n        {\n          \"type\": \"<string>\",\n          \"isAllowed\": \"<boolean>\"\n        }\n      ],\n      \"conditions\": [\n        \"<string>\",\n        \"<string>\"\n      ]\n    }\n  ]\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "a2836d3f-1045-4b69-8a9d-5753240698c4",
+              "name": "Policy updated",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "plugins",
+                    "policies",
+                    ":id"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<integer>",
+                      "key": "id",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: basic",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Basic <credentials>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "PUT",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"id\": \"<integer>\",\n  \"name\": \"<string>\",\n  \"serviceType\": \"<string>\",\n  \"serviceName\": \"<string>\",\n  \"description\": \"<string>\",\n  \"isEnabled\": \"<boolean>\",\n  \"isAuditEnabled\": \"<boolean>\",\n  \"resources\": {\n    \"key_0\": {\n      \"values\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"isRecursive\": \"<boolean>\",\n      \"isExcludes\": \"<boolean>\"\n    },\n    \"key_1\": {\n      \"values\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"isRecursive\": \"<boolean>\",\n      \"isExcludes\": \"<boolean>\"\n    }\n  },\n  \"policyItems\": [\n    {\n      \"users\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"groups\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"accesses\": [\n        {\n          \"type\": \"<string>\",\n          \"isAllowed\": \"<boolean>\"\n        },\n        {\n          \"type\": \"<string>\",\n          \"isAllowed\": \"<boolean>\"\n        }\n      ],\n      \"conditions\": [\n        \"<string>\",\n        \"<string>\"\n      ]\n    },\n    {\n      \"users\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"groups\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"accesses\": [\n        {\n          \"type\": \"<string>\",\n          \"isAllowed\": \"<boolean>\"\n        },\n        {\n          \"type\": \"<string>\",\n          \"isAllowed\": \"<boolean>\"\n        }\n      ],\n      \"conditions\": [\n        \"<string>\",\n        \"<string>\"\n      ]\n    }\n  ]\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"id\": \"<integer>\",\n  \"name\": \"<string>\",\n  \"serviceType\": \"<string>\",\n  \"serviceName\": \"<string>\",\n  \"description\": \"<string>\",\n  \"isEnabled\": \"<boolean>\",\n  \"isAuditEnabled\": \"<boolean>\",\n  \"resources\": {\n    \"key_0\": {\n      \"values\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"isRecursive\": \"<boolean>\",\n      \"isExcludes\": \"<boolean>\"\n    },\n    \"key_1\": {\n      \"values\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"isRecursive\": \"<boolean>\",\n      \"isExcludes\": \"<boolean>\"\n    }\n  },\n  \"policyItems\": [\n    {\n      \"users\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"groups\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"accesses\": [\n        {\n          \"type\": \"<string>\",\n          \"isAllowed\": \"<boolean>\"\n        },\n        {\n          \"type\": \"<string>\",\n          \"isAllowed\": \"<boolean>\"\n        }\n      ],\n      \"conditions\": [\n        \"<string>\",\n        \"<string>\"\n      ]\n    },\n    {\n      \"users\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"groups\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"accesses\": [\n        {\n          \"type\": \"<string>\",\n          \"isAllowed\": \"<boolean>\"\n        },\n        {\n          \"type\": \"<string>\",\n          \"isAllowed\": \"<boolean>\"\n        }\n      ],\n      \"conditions\": [\n        \"<string>\",\n        \"<string>\"\n      ]\n    }\n  ]\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "324656ad-a7b4-4c84-aad5-bda62c7084f4",
+          "name": "Apache Ranger Delete Policy",
+          "request": {
+            "name": "Apache Ranger Delete Policy",
+            "description": {
+              "content": "Delete a security policy by ID.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "plugins",
+                "policies",
+                ":id"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<integer>",
+                  "key": "id",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "method": "DELETE",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "28bb13dc-8b7a-4ca8-a8ea-1d3ab09154f0",
+              "name": "Policy deleted",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "plugins",
+                    "policies",
+                    ":id"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<integer>",
+                      "key": "id",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: basic",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Basic <credentials>"
+                  }
+                ],
+                "method": "DELETE",
+                "body": {}
+              },
+              "status": "No Content",
+              "code": 204,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://ranger.example.com/service",
+      "key": "baseUrl"
+    }
+  ],
+  "auth": {
+    "type": "basic",
+    "basic": [
+      {
+        "key": "username",
+        "value": "{{basicAuthUsername}}"
+      },
+      {
+        "key": "password",
+        "value": "{{basicAuthPassword}}"
+      }
+    ]
+  },
+  "info": {
+    "_postman_id": "85c2f769-1008-41ee-afee-e00ab67a60ec",
+    "name": "Apache Ranger REST Audit Policies API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Apache Ranger provides centralized security administration and policy management for Hadoop ecosystem services. This API covers policy management, service definitions, audit logs, user/group management, and security zones.\n\nContact Support:\n Name: Apache Ranger",
+      "type": "text/plain"
+    }
+  }
+}

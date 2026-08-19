@@ -1,0 +1,122 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Apache Ranger REST Audit Policies API",
+    "version": "2.4.0"
+  },
+  "request": {
+    "auth": {
+      "type": "basic",
+      "username": "{{username}}",
+      "password": "{{password}}"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Policies",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Apache Ranger List Policies",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://ranger.example.com/service/plugins/policies",
+            "params": [
+              {
+                "name": "serviceType",
+                "value": "",
+                "type": "query",
+                "description": "Filter by service type (hdfs, hive, hbase, etc.)"
+              },
+              {
+                "name": "serviceName",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "List all security policies managed by Ranger."
+        },
+        {
+          "info": {
+            "name": "Apache Ranger Create Policy",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://ranger.example.com/service/plugins/policies",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Create a new security policy in Ranger."
+        },
+        {
+          "info": {
+            "name": "Apache Ranger Get Policy",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://ranger.example.com/service/plugins/policies/:id",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Retrieve a specific security policy by ID."
+        },
+        {
+          "info": {
+            "name": "Apache Ranger Update Policy",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "https://ranger.example.com/service/plugins/policies/:id",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Update an existing security policy."
+        },
+        {
+          "info": {
+            "name": "Apache Ranger Delete Policy",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "https://ranger.example.com/service/plugins/policies/:id",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Delete a security policy by ID."
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

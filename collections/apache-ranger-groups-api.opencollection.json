@@ -1,0 +1,36 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Apache Ranger REST Audit Groups API",
+    "version": "2.4.0"
+  },
+  "request": {
+    "auth": {
+      "type": "basic",
+      "username": "{{username}}",
+      "password": "{{password}}"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Groups",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Apache Ranger List Groups",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://ranger.example.com/service/xusers/groups"
+          },
+          "docs": "List all user groups in Ranger."
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

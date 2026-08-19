@@ -1,0 +1,58 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Apache Ranger REST Audit API",
+    "version": "2.4.0"
+  },
+  "request": {
+    "auth": {
+      "type": "basic",
+      "username": "{{username}}",
+      "password": "{{password}}"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Audit",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Apache Ranger Get Access Audit",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://ranger.example.com/service/audit/access",
+            "params": [
+              {
+                "name": "startDate",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "endDate",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "user",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "resource",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "Retrieve access audit logs showing who accessed what resources."
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

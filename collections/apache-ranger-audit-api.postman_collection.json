@@ -1,0 +1,163 @@
+{
+  "item": [
+    {
+      "id": "6879842b-63ee-4393-afdf-2797659f6d3f",
+      "name": "Audit",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "f079ef1c-c165-4d99-9a58-9a0fc431323a",
+          "name": "Apache Ranger Get Access Audit",
+          "request": {
+            "name": "Apache Ranger Get Access Audit",
+            "description": {
+              "content": "Retrieve access audit logs showing who accessed what resources.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "audit",
+                "access"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "startDate",
+                  "value": "<dateTime>"
+                },
+                {
+                  "disabled": false,
+                  "key": "endDate",
+                  "value": "<dateTime>"
+                },
+                {
+                  "disabled": false,
+                  "key": "user",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "resource",
+                  "value": "<string>"
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "8cb2fdfa-f68f-4f5b-94c6-557e4e5fd225",
+              "name": "Audit log entries",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "audit",
+                    "access"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "startDate",
+                      "value": "<dateTime>"
+                    },
+                    {
+                      "key": "endDate",
+                      "value": "<dateTime>"
+                    },
+                    {
+                      "key": "user",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "resource",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: basic",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Basic <credentials>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"totalCount\": 2771,\n  \"auditList\": [\n    {\n      \"id\": \"string\",\n      \"user\": \"string\",\n      \"resourceType\": \"string\",\n      \"resourcePath\": \"string\",\n      \"accessType\": \"string\",\n      \"result\": 5704,\n      \"aclEnforcer\": \"string\",\n      \"agentId\": \"string\",\n      \"repoName\": \"string\",\n      \"sessionId\": \"string\",\n      \"clientIP\": \"string\",\n      \"eventTime\": \"2006-02-17T19:45:00.225Z\"\n    },\n    {\n      \"id\": \"string\",\n      \"user\": \"string\",\n      \"resourceType\": \"string\",\n      \"resourcePath\": \"string\",\n      \"accessType\": \"string\",\n      \"result\": 3918,\n      \"aclEnforcer\": \"string\",\n      \"agentId\": \"string\",\n      \"repoName\": \"string\",\n      \"sessionId\": \"string\",\n      \"clientIP\": \"string\",\n      \"eventTime\": \"1958-03-12T16:29:33.675Z\"\n    }\n  ]\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://ranger.example.com/service",
+      "key": "baseUrl"
+    }
+  ],
+  "auth": {
+    "type": "basic",
+    "basic": [
+      {
+        "key": "username",
+        "value": "{{basicAuthUsername}}"
+      },
+      {
+        "key": "password",
+        "value": "{{basicAuthPassword}}"
+      }
+    ]
+  },
+  "info": {
+    "_postman_id": "7e2f9fc7-11fb-46c2-9434-2490e1caa8e2",
+    "name": "Apache Ranger REST Audit API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Apache Ranger provides centralized security administration and policy management for Hadoop ecosystem services. This API covers policy management, service definitions, audit logs, user/group management, and security zones.\n\nContact Support:\n Name: Apache Ranger",
+      "type": "text/plain"
+    }
+  }
+}

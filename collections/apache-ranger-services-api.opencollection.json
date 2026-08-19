@@ -1,0 +1,87 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Apache Ranger REST Audit Services API",
+    "version": "2.4.0"
+  },
+  "request": {
+    "auth": {
+      "type": "basic",
+      "username": "{{username}}",
+      "password": "{{password}}"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Services",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Apache Ranger List Services",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://ranger.example.com/service/plugins/services"
+          },
+          "docs": "List all registered services in Ranger."
+        },
+        {
+          "info": {
+            "name": "Apache Ranger Create Service",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://ranger.example.com/service/plugins/services",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Register a new service with Ranger for policy management."
+        },
+        {
+          "info": {
+            "name": "Apache Ranger Get Service",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://ranger.example.com/service/plugins/services/:id",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Retrieve details of a specific Ranger service."
+        },
+        {
+          "info": {
+            "name": "Apache Ranger Delete Service",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "https://ranger.example.com/service/plugins/services/:id",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Remove a service from Ranger management."
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

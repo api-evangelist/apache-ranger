@@ -1,0 +1,51 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Apache Ranger REST Audit Users API",
+    "version": "2.4.0"
+  },
+  "request": {
+    "auth": {
+      "type": "basic",
+      "username": "{{username}}",
+      "password": "{{password}}"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Users",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Apache Ranger List Users",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://ranger.example.com/service/xusers/users"
+          },
+          "docs": "List all users registered in Ranger."
+        },
+        {
+          "info": {
+            "name": "Apache Ranger Create User",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://ranger.example.com/service/xusers/users",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Create a new user in Ranger."
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}
