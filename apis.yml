@@ -3,6 +3,17 @@ name: Apache Ranger
 description: Apache Ranger is a framework to enable, monitor, and manage comprehensive data security across the Hadoop platform.
   It provides centralized security administration for fine-grained authorization policies across Hadoop ecosystem components.
 type: Index
+deliveryModel:
+  model: unknown
+  open_source: false
+  commercial: false
+  callable_host: false
+  label: Delivery model not determined — needs a product licence on record
+  confidence: low
+  source:
+  - openapi
+  generated: '2026-08-28'
+  method: derived
 accessModel:
   pricing: freemium
   onboarding: self-serve
