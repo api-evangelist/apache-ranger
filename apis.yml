@@ -1,7 +1,8 @@
 aid: apache-ranger
 name: Apache Ranger
-description: Apache Ranger is a framework to enable, monitor, and manage comprehensive data security across the Hadoop platform.
-  It provides centralized security administration for fine-grained authorization policies across Hadoop ecosystem components.
+description: Apache Ranger is a framework to enable, monitor, and manage comprehensive data security across
+  the Hadoop platform. It provides centralized security administration for fine-grained authorization
+  policies across Hadoop ecosystem components.
 type: Index
 deliveryModel:
   model: unknown
@@ -48,7 +49,7 @@ tags_raw:
 - Apache
 - Open Source
 created: '2026-03-16'
-modified: '2026-05-19'
+modified: '2026-09-16'
 url: https://raw.githubusercontent.com/api-evangelist/apache-ranger/refs/heads/main/apis.yml
 specificationVersion: '0.23'
 apis:
@@ -125,6 +126,8 @@ maintainers:
 - FN: Kin Lane
   email: info@apievangelist.com
 common:
+- type: Website
+  url: https://apache.org
 - type: AgenticAccess
   url: agentic-access/apache-ranger-agentic-access.yml
 - type: VulnerabilityDisclosure
