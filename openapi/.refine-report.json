@@ -1,11 +1,7 @@
 {
   "provider": "apache-ranger",
   "sources": [
-    "apache-ranger-audit-api-openapi.yml",
-    "apache-ranger-groups-api-openapi.yml",
-    "apache-ranger-policies-api-openapi.yml",
-    "apache-ranger-services-api-openapi.yml",
-    "apache-ranger-users-api-openapi.yml"
+    "_original/apache-ranger-rest-api.yaml"
   ],
   "outputs": [
     "apache-ranger-audit-api-openapi.yml",
@@ -17,6 +13,21 @@
   "archived": [],
   "errors": [],
   "warnings": [],
-  "notes": [],
-  "skipped": []
+  "notes": [
+    "sourced from openapi/_original/ (1 archived document(s)); previously refined output at the top level was skipped rather than re-split",
+    "apache-ranger-rest-api.yaml: upgraded openapi 3.0.3 -> OpenAPI 3.2.0",
+    "apache-ranger-rest-api.yaml: declared missing tag: Audit",
+    "apache-ranger-rest-api.yaml: declared missing tag: Groups",
+    "apache-ranger-rest-api.yaml: declared missing tag: Policies",
+    "apache-ranger-rest-api.yaml: declared missing tag: Services",
+    "apache-ranger-rest-api.yaml: declared missing tag: Users",
+    "apis.yml register: already-registered"
+  ],
+  "skipped": [
+    "apache-ranger-audit-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "apache-ranger-groups-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "apache-ranger-policies-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "apache-ranger-services-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "apache-ranger-users-api-openapi.yml: previously refined output, superseded by openapi/_original/"
+  ]
 }

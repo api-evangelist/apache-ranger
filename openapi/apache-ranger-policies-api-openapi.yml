@@ -1,6 +1,6 @@
-openapi: 3.0.3
+openapi: 3.2.0
 info:
-  title: Apache Ranger REST Audit Policies API
+  title: Apache Ranger REST Policies API
   description: Apache Ranger provides centralized security administration and policy management for Hadoop ecosystem services. This API covers policy management, service definitions, audit logs, user/group management, and security zones.
   version: 2.4.0
   contact:
@@ -135,31 +135,28 @@ paths:
           description: Policy deleted
 components:
   schemas:
-    AccessType:
+    PolicyItem:
       type: object
-      description: Access type in a policy item
+      description: Policy item defining access permissions
       properties:
-        type:
-          type: string
-          description: Access type name (read, write, execute, etc.)
-        isAllowed:
-          type: boolean
-          description: Whether the access is allowed
-    PolicyResource:
-      type: object
-      description: Resource specification in a Ranger policy
-      properties:
-        values:
+        users:
           type: array
           items:
             type: string
-          description: Resource values (paths, tables, etc.)
-        isRecursive:
-          type: boolean
-          description: Whether to apply recursively
-        isExcludes:
-          type: boolean
-          description: Whether this is an exclusion list
+          description: Users granted access
+        groups:
+          type: array
+          items:
+            type: string
+          description: Groups granted access
+        accesses:
+          type: array
+          items:
+            $ref: '#/components/schemas/AccessType'
+        conditions:
+          type: array
+          items:
+            type: string
     Policy:
       type: object
       description: Ranger security policy definition
@@ -194,6 +191,31 @@ components:
           type: array
           items:
             $ref: '#/components/schemas/PolicyItem'
+    AccessType:
+      type: object
+      description: Access type in a policy item
+      properties:
+        type:
+          type: string
+          description: Access type name (read, write, execute, etc.)
+        isAllowed:
+          type: boolean
+          description: Whether the access is allowed
+    PolicyResource:
+      type: object
+      description: Resource specification in a Ranger policy
+      properties:
+        values:
+          type: array
+          items:
+            type: string
+          description: Resource values (paths, tables, etc.)
+        isRecursive:
+          type: boolean
+          description: Whether to apply recursively
+        isExcludes:
+          type: boolean
+          description: Whether this is an exclusion list
     PolicyList:
       type: object
       description: List of Ranger security policies
@@ -209,28 +231,6 @@ components:
           type: array
           items:
             $ref: '#/components/schemas/Policy'
-    PolicyItem:
-      type: object
-      description: Policy item defining access permissions
-      properties:
-        users:
-          type: array
-          items:
-            type: string
-          description: Users granted access
-        groups:
-          type: array
-          items:
-            type: string
-          description: Groups granted access
-        accesses:
-          type: array
-          items:
-            $ref: '#/components/schemas/AccessType'
-        conditions:
-          type: array
-          items:
-            type: string
   securitySchemes:
     basicAuth:
       type: http
