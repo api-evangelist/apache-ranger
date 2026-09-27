@@ -135,28 +135,16 @@ paths:
           description: Policy deleted
 components:
   schemas:
-    PolicyItem:
+    AccessType:
       type: object
-      description: Policy item defining access permissions
+      description: Access type in a policy item
       properties:
-        users:
-          type: array
-          items:
-            type: string
-          description: Users granted access
-        groups:
-          type: array
-          items:
-            type: string
-          description: Groups granted access
-        accesses:
-          type: array
-          items:
-            $ref: '#/components/schemas/AccessType'
-        conditions:
-          type: array
-          items:
-            type: string
+        type:
+          type: string
+          description: Access type name (read, write, execute, etc.)
+        isAllowed:
+          type: boolean
+          description: Whether the access is allowed
     Policy:
       type: object
       description: Ranger security policy definition
@@ -191,16 +179,6 @@ components:
           type: array
           items:
             $ref: '#/components/schemas/PolicyItem'
-    AccessType:
-      type: object
-      description: Access type in a policy item
-      properties:
-        type:
-          type: string
-          description: Access type name (read, write, execute, etc.)
-        isAllowed:
-          type: boolean
-          description: Whether the access is allowed
     PolicyResource:
       type: object
       description: Resource specification in a Ranger policy
@@ -231,6 +209,28 @@ components:
           type: array
           items:
             $ref: '#/components/schemas/Policy'
+    PolicyItem:
+      type: object
+      description: Policy item defining access permissions
+      properties:
+        users:
+          type: array
+          items:
+            type: string
+          description: Users granted access
+        groups:
+          type: array
+          items:
+            type: string
+          description: Groups granted access
+        accesses:
+          type: array
+          items:
+            $ref: '#/components/schemas/AccessType'
+        conditions:
+          type: array
+          items:
+            type: string
   securitySchemes:
     basicAuth:
       type: http

@@ -39,7 +39,7 @@ tags:
 - Policy Management
 - Security
 - Apache
-- Open-Source
+- Open Source
 tags_raw:
 - Access Control
 - Authorization
@@ -48,6 +48,7 @@ tags_raw:
 - Security
 - Apache
 - Open Source
+- Open-Source
 created: '2026-03-16'
 modified: '2026-09-16'
 url: https://raw.githubusercontent.com/api-evangelist/apache-ranger/refs/heads/main/apis.yml
