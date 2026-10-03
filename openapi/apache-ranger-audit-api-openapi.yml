@@ -54,6 +54,16 @@ paths:
                 $ref: '#/components/schemas/AuditList'
 components:
   schemas:
+    AuditList:
+      type: object
+      description: Access audit log entries
+      properties:
+        totalCount:
+          type: integer
+        auditList:
+          type: array
+          items:
+            $ref: '#/components/schemas/AuditEntry'
     AuditEntry:
       type: object
       description: Single access audit log entry
@@ -95,16 +105,6 @@ components:
           type: string
           format: date-time
           description: Time of access event
-    AuditList:
-      type: object
-      description: Access audit log entries
-      properties:
-        totalCount:
-          type: integer
-        auditList:
-          type: array
-          items:
-            $ref: '#/components/schemas/AuditEntry'
   securitySchemes:
     basicAuth:
       type: http

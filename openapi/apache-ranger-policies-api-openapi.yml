@@ -135,16 +135,6 @@ paths:
           description: Policy deleted
 components:
   schemas:
-    AccessType:
-      type: object
-      description: Access type in a policy item
-      properties:
-        type:
-          type: string
-          description: Access type name (read, write, execute, etc.)
-        isAllowed:
-          type: boolean
-          description: Whether the access is allowed
     Policy:
       type: object
       description: Ranger security policy definition
@@ -194,21 +184,6 @@ components:
         isExcludes:
           type: boolean
           description: Whether this is an exclusion list
-    PolicyList:
-      type: object
-      description: List of Ranger security policies
-      properties:
-        totalCount:
-          type: integer
-          description: Total number of policies
-        pageSize:
-          type: integer
-        resultSize:
-          type: integer
-        policies:
-          type: array
-          items:
-            $ref: '#/components/schemas/Policy'
     PolicyItem:
       type: object
       description: Policy item defining access permissions
@@ -231,6 +206,31 @@ components:
           type: array
           items:
             type: string
+    AccessType:
+      type: object
+      description: Access type in a policy item
+      properties:
+        type:
+          type: string
+          description: Access type name (read, write, execute, etc.)
+        isAllowed:
+          type: boolean
+          description: Whether the access is allowed
+    PolicyList:
+      type: object
+      description: List of Ranger security policies
+      properties:
+        totalCount:
+          type: integer
+          description: Total number of policies
+        pageSize:
+          type: integer
+        resultSize:
+          type: integer
+        policies:
+          type: array
+          items:
+            $ref: '#/components/schemas/Policy'
   securitySchemes:
     basicAuth:
       type: http

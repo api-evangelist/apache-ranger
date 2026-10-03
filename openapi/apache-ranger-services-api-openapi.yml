@@ -97,6 +97,16 @@ paths:
           description: Service deleted
 components:
   schemas:
+    ServiceList:
+      type: object
+      description: List of Ranger services
+      properties:
+        totalCount:
+          type: integer
+        services:
+          type: array
+          items:
+            $ref: '#/components/schemas/RangerService'
     RangerService:
       type: object
       description: Ranger service definition
@@ -121,16 +131,6 @@ components:
           description: Service connection configuration
           additionalProperties:
             type: string
-    ServiceList:
-      type: object
-      description: List of Ranger services
-      properties:
-        totalCount:
-          type: integer
-        services:
-          type: array
-          items:
-            $ref: '#/components/schemas/RangerService'
   securitySchemes:
     basicAuth:
       type: http
