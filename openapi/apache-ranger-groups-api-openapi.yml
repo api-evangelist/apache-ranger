@@ -35,16 +35,6 @@ paths:
                 $ref: '#/components/schemas/GroupList'
 components:
   schemas:
-    GroupList:
-      type: object
-      description: List of Ranger groups
-      properties:
-        totalCount:
-          type: integer
-        groups:
-          type: array
-          items:
-            $ref: '#/components/schemas/RangerGroup'
     RangerGroup:
       type: object
       description: Ranger user group
@@ -61,6 +51,16 @@ components:
         groupSource:
           type: integer
           description: Group source (0=internal, 1=LDAP/AD)
+    GroupList:
+      type: object
+      description: List of Ranger groups
+      properties:
+        totalCount:
+          type: integer
+        groups:
+          type: array
+          items:
+            $ref: '#/components/schemas/RangerGroup'
   securitySchemes:
     basicAuth:
       type: http

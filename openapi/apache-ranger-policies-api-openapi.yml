@@ -135,6 +135,53 @@ paths:
           description: Policy deleted
 components:
   schemas:
+    PolicyItem:
+      type: object
+      description: Policy item defining access permissions
+      properties:
+        users:
+          type: array
+          items:
+            type: string
+          description: Users granted access
+        groups:
+          type: array
+          items:
+            type: string
+          description: Groups granted access
+        accesses:
+          type: array
+          items:
+            $ref: '#/components/schemas/AccessType'
+        conditions:
+          type: array
+          items:
+            type: string
+    PolicyResource:
+      type: object
+      description: Resource specification in a Ranger policy
+      properties:
+        values:
+          type: array
+          items:
+            type: string
+          description: Resource values (paths, tables, etc.)
+        isRecursive:
+          type: boolean
+          description: Whether to apply recursively
+        isExcludes:
+          type: boolean
+          description: Whether this is an exclusion list
+    AccessType:
+      type: object
+      description: Access type in a policy item
+      properties:
+        type:
+          type: string
+          description: Access type name (read, write, execute, etc.)
+        isAllowed:
+          type: boolean
+          description: Whether the access is allowed
     Policy:
       type: object
       description: Ranger security policy definition
@@ -169,53 +216,6 @@ components:
           type: array
           items:
             $ref: '#/components/schemas/PolicyItem'
-    PolicyResource:
-      type: object
-      description: Resource specification in a Ranger policy
-      properties:
-        values:
-          type: array
-          items:
-            type: string
-          description: Resource values (paths, tables, etc.)
-        isRecursive:
-          type: boolean
-          description: Whether to apply recursively
-        isExcludes:
-          type: boolean
-          description: Whether this is an exclusion list
-    PolicyItem:
-      type: object
-      description: Policy item defining access permissions
-      properties:
-        users:
-          type: array
-          items:
-            type: string
-          description: Users granted access
-        groups:
-          type: array
-          items:
-            type: string
-          description: Groups granted access
-        accesses:
-          type: array
-          items:
-            $ref: '#/components/schemas/AccessType'
-        conditions:
-          type: array
-          items:
-            type: string
-    AccessType:
-      type: object
-      description: Access type in a policy item
-      properties:
-        type:
-          type: string
-          description: Access type name (read, write, execute, etc.)
-        isAllowed:
-          type: boolean
-          description: Whether the access is allowed
     PolicyList:
       type: object
       description: List of Ranger security policies
