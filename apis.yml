@@ -127,6 +127,9 @@ maintainers:
 - FN: Kin Lane
   email: info@apievangelist.com
 common:
+- type: CapabilityMap
+  url: capabilities/apache-ranger-capability-edges.yml
+  name: Apache Ranger Business Capability Map
 - type: Website
   url: https://apache.org
 - type: AgenticAccess

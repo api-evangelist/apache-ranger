@@ -1,0 +1,53 @@
+slug: apache-ranger
+provider: Apache Ranger
+generated_by: planning/capability-mapping/scripts/classify_capabilities.py
+model: claude-opus-5
+frame:
+- Software & Technology
+min_confidence: 0.7
+capability_model:
+  source: https://github.com/vincentmakes/turbo-ea-capabilities
+  license: CC-BY-4.0
+  attribution: Turbo EA Capabilities by Vincent Verdet — Turbo EA, https://github.com/vincentmakes/turbo-ea-capabilities,
+    CC BY 4.0
+  notice: NOTICE
+edge_count: 4
+edges:
+- tag: Policies
+  spec_file: apache-ranger-policies-api-openapi.yml
+  capability_id: BC-620.20
+  capability_id_l1: BC-620
+  capability_name: Identity & Access Management
+  confidence: 0.85
+  evidence: '"fine-grained authorization policies"; POST /plugins/policies createPolicy; schemas Policy,
+    AccessType'
+  reason: Operations manage fine-grained authorization/access policies for data platform services — identity
+    & access management (authorization policy administration), not corporate policy management.
+- tag: Users
+  spec_file: apache-ranger-users-api-openapi.yml
+  capability_id: BC-620.20
+  capability_id_l1: BC-620
+  capability_name: Identity & Access Management
+  confidence: 0.8
+  evidence: POST /xusers/users createUser; schema RangerUser; "user/group management"
+  reason: Creates and lists security principals used in authorization decisions — identity and access
+    management, not HR employee records.
+- tag: Groups
+  spec_file: apache-ranger-groups-api-openapi.yml
+  capability_id: BC-620.20
+  capability_id_l1: BC-620
+  capability_name: Identity & Access Management
+  confidence: 0.75
+  evidence: GET /xusers/groups listGroups; schema RangerGroup; 'This API covers policy management, service
+    definitions, audit logs, user/group management, and security zones'
+  reason: User/group management within a centralized authorization framework is identity and access management.
+- tag: Audit
+  spec_file: apache-ranger-audit-api-openapi.yml
+  capability_id: BC-620.20
+  capability_id_l1: BC-620
+  capability_name: Identity & Access Management
+  confidence: 0.7
+  evidence: GET /audit/access getAccessAudit 'Get Access Audit'; schemas AuditList, AuditEntry; 'fine-grained
+    authorization policies'
+  reason: Access audit logs from a centralized authorization platform fall under cybersecurity identity
+    & access management; could also be read as security governance, hence moderate confidence.
