@@ -1,4 +1,4 @@
-# Apache Ranger (apache-ranger)
+# Apache Ranger
 
 <!-- API-EVANGELIST-PROVENANCE:BEGIN -->
 > ### About this repository
@@ -66,122 +66,196 @@
 
 Apache Ranger is a framework to enable, monitor, and manage comprehensive data security across the Hadoop platform. It provides centralized security administration for fine-grained authorization policies across Hadoop ecosystem components.
 
-**URL:** [https://raw.githubusercontent.com/api-evangelist/apache-ranger/refs/heads/main/apis.yml](https://raw.githubusercontent.com/api-evangelist/apache-ranger/refs/heads/main/apis.yml)
+**Areas:** Access Control · Authorization · Hadoop · Policy Management · Security · Apache · Open Source
 
-**Run:** [Capabilities Using Naftiko](https://github.com/naftiko/fleet?utm_source=api-evangelist&utm_medium=readme&utm_campaign=company-api-evangelist&utm_content=repo)
+## Apache Ranger on APIs.io
 
-## Tags:
+Everything profiled for Apache Ranger is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/apache-ranger/](https://apis.io/providers/apache-ranger/)** — or go straight to one of the APIs or properties below.
 
- - Access Control, Authorization, Hadoop, Policy Management, Security, Apache, Open Source
+### APIs (5)
 
-## Timestamps
+- [Apache Ranger Audit API](https://apis.io/apis/apache-ranger/apache-ranger-audit-api/) — The Audit API from Apache Ranger — 1 operation(s) for audit.
+- [Apache Ranger Groups API](https://apis.io/apis/apache-ranger/apache-ranger-groups-api/) — The Groups API from Apache Ranger — 1 operation(s) for groups.
+- [Apache Ranger Policies API](https://apis.io/apis/apache-ranger/apache-ranger-policies-api/) — The Policies API from Apache Ranger — 2 operation(s) for policies.
+- [Apache Ranger Services API](https://apis.io/apis/apache-ranger/apache-ranger-services-api/) — The Services API from Apache Ranger — 2 operation(s) for services.
+- [Apache Ranger Users API](https://apis.io/apis/apache-ranger/apache-ranger-users-api/) — The Users API from Apache Ranger — 1 operation(s) for users.
 
-- **Created:** 2026-03-16
-- **Modified:** 2026-04-19
+### Published properties
 
-## APIs
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
 
-### Apache Ranger REST API
-The Ranger REST API provides endpoints for policy management, service management, user/group management, audit log retrieval, and security zone administration, with plugin APIs for enforcing policies in HDFS, Hive, HBase, and other services.
+#### Agentic access (1)
 
-**Human URL:** [https://ranger.apache.org/](https://ranger.apache.org/)
+Which operations an agent can call, which act, and which need a human in the loop.
 
-#### Tags:
+- [Apache Ranger Agentic Access](https://apis.io/agentic-access/apache-ranger/apache-ranger-agentic-access/)
 
- - Access Control, Policy Management, REST, Apache, Open Source
+#### JSON Schema (13)
 
-#### Properties
+The data models the API reads and writes.
 
+- [AccessType](https://apis.io/schemas/apache-ranger/apache-ranger-access-type/)
+- [AuditEntry](https://apis.io/schemas/apache-ranger/apache-ranger-audit-entry/)
+- [AuditList](https://apis.io/schemas/apache-ranger/apache-ranger-audit-list/)
+- [GroupList](https://apis.io/schemas/apache-ranger/apache-ranger-group-list/)
+- [Policy](https://apis.io/schemas/apache-ranger/apache-ranger-policy/)
+- [PolicyItem](https://apis.io/schemas/apache-ranger/apache-ranger-policy-item/)
+- [PolicyList](https://apis.io/schemas/apache-ranger/apache-ranger-policy-list/)
+- [PolicyResource](https://apis.io/schemas/apache-ranger/apache-ranger-policy-resource/)
+- [RangerGroup](https://apis.io/schemas/apache-ranger/apache-ranger-ranger-group/)
+- [RangerService](https://apis.io/schemas/apache-ranger/apache-ranger-ranger-service/)
+- [RangerUser](https://apis.io/schemas/apache-ranger/apache-ranger-ranger-user/)
+- [ServiceList](https://apis.io/schemas/apache-ranger/apache-ranger-service-list/)
+- [UserList](https://apis.io/schemas/apache-ranger/apache-ranger-user-list/)
+
+#### JSON Structure (13)
+
+Data models expressed in JSON Structure.
+
+- [Apache Ranger Access Type Structure](https://apis.io/json-structure/apache-ranger/apache-ranger-access-type-structure/)
+- [Apache Ranger Audit Entry Structure](https://apis.io/json-structure/apache-ranger/apache-ranger-audit-entry-structure/)
+- [Apache Ranger Audit List Structure](https://apis.io/json-structure/apache-ranger/apache-ranger-audit-list-structure/)
+- [Apache Ranger Group List Structure](https://apis.io/json-structure/apache-ranger/apache-ranger-group-list-structure/)
+- [Apache Ranger Policy Item Structure](https://apis.io/json-structure/apache-ranger/apache-ranger-policy-item-structure/)
+- [Apache Ranger Policy List Structure](https://apis.io/json-structure/apache-ranger/apache-ranger-policy-list-structure/)
+- [Apache Ranger Policy Resource Structure](https://apis.io/json-structure/apache-ranger/apache-ranger-policy-resource-structure/)
+- [Apache Ranger Policy Structure](https://apis.io/json-structure/apache-ranger/apache-ranger-policy-structure/)
+- [Apache Ranger Ranger Group Structure](https://apis.io/json-structure/apache-ranger/apache-ranger-ranger-group-structure/)
+- [Apache Ranger Ranger Service Structure](https://apis.io/json-structure/apache-ranger/apache-ranger-ranger-service-structure/)
+- [Apache Ranger Ranger User Structure](https://apis.io/json-structure/apache-ranger/apache-ranger-ranger-user-structure/)
+- [Apache Ranger Service List Structure](https://apis.io/json-structure/apache-ranger/apache-ranger-service-list-structure/)
+- [Apache Ranger User List Structure](https://apis.io/json-structure/apache-ranger/apache-ranger-user-list-structure/)
+
+#### JSON-LD (1)
+
+Linked-data contexts for the provider's vocabulary.
+
+- [Apache Ranger Context](https://apis.io/jsonld/apache-ranger/apache-ranger-context/)
+
+#### Vocabulary (1)
+
+The provider's domain terms, defined.
+
+- [Apache Ranger Vocabulary](https://apis.io/vocabularies/apache-ranger/apache-ranger-vocabulary/)
+
+#### Examples (13)
+
+Example requests and responses.
+
+- [Apache Ranger Access Type Example](https://apis.io/examples/apache-ranger/apache-ranger-access-type-example/)
+- [Apache Ranger Audit Entry Example](https://apis.io/examples/apache-ranger/apache-ranger-audit-entry-example/)
+- [Apache Ranger Audit List Example](https://apis.io/examples/apache-ranger/apache-ranger-audit-list-example/)
+- [Apache Ranger Group List Example](https://apis.io/examples/apache-ranger/apache-ranger-group-list-example/)
+- [Apache Ranger Policy Example](https://apis.io/examples/apache-ranger/apache-ranger-policy-example/)
+- [Apache Ranger Policy Item Example](https://apis.io/examples/apache-ranger/apache-ranger-policy-item-example/)
+- [Apache Ranger Policy List Example](https://apis.io/examples/apache-ranger/apache-ranger-policy-list-example/)
+- [Apache Ranger Policy Resource Example](https://apis.io/examples/apache-ranger/apache-ranger-policy-resource-example/)
+- [Apache Ranger Ranger Group Example](https://apis.io/examples/apache-ranger/apache-ranger-ranger-group-example/)
+- [Apache Ranger Ranger Service Example](https://apis.io/examples/apache-ranger/apache-ranger-ranger-service-example/)
+- [Apache Ranger Ranger User Example](https://apis.io/examples/apache-ranger/apache-ranger-ranger-user-example/)
+- [Apache Ranger Service List Example](https://apis.io/examples/apache-ranger/apache-ranger-service-list-example/)
+- [Apache Ranger User List Example](https://apis.io/examples/apache-ranger/apache-ranger-user-list-example/)
+
+#### Collections (5)
+
+Postman and Open Collection request collections.
+
+- [Apache Ranger REST Audit API](https://apis.io/collections/apache-ranger/open-apache-ranger-audit-api/)
+- [Apache Ranger REST Audit Groups API](https://apis.io/collections/apache-ranger/open-apache-ranger-groups-api/)
+- [Apache Ranger REST Audit Policies API](https://apis.io/collections/apache-ranger/open-apache-ranger-policies-api/)
+- [Apache Ranger REST Audit Services API](https://apis.io/collections/apache-ranger/open-apache-ranger-services-api/)
+- [Apache Ranger REST Audit Users API](https://apis.io/collections/apache-ranger/open-apache-ranger-users-api/)
+
+#### Governance rules (2)
+
+Spectral rulesets for the provider's contracts.
+
+- [Apache Ranger — jsonschema rules](https://apis.io/rules/apache-ranger/apache-ranger-jsonschema-spectral-rules/)
+- [Apache Ranger API Rules](https://apis.io/rules/apache-ranger/apache-ranger-spectral-rules/)
+
+#### Security (3)
+
+Authentication, trust centre, and vulnerability disclosure.
+
+- [Apache Ranger Authentication](https://apis.io/security/apache-ranger/apache-ranger-authentication/)
+- [Apache Ranger Domain Security](https://apis.io/security/apache-ranger/apache-ranger-domain-security/)
+- [Apache Ranger Vulnerability Disclosure](https://apis.io/security/apache-ranger/apache-ranger-vulnerability-disclosure/)
+
+#### Plans and pricing (1)
+
+Published plans, tiers and prices.
+
+- [Apache Ranger Plans Pricing](https://apis.io/plans/apache-ranger/apache-ranger-plans-pricing/)
+
+#### Rate limits (1)
+
+Published request limits.
+
+- [Apache Ranger Rate Limits](https://apis.io/rate-limits/apache-ranger/apache-ranger-rate-limits/)
+
+#### FinOps (1)
+
+What the API costs to run, by operation.
+
+- [Apache Ranger Finops](https://apis.io/finops/apache-ranger/apache-ranger-finops/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
+- [Website](https://apache.org)
 - [Documentation](https://ranger.apache.org/)
-- [OpenAPI](openapi/apache-ranger-rest-api.yaml)
+- [GitHub](https://github.com/apache/ranger)
 
-## Common Properties
+## API Evangelist rating
 
-- [GitHubOrganization](https://github.com/apache/ranger)
-- [Documentation](https://ranger.apache.org/)
-- [SpectralRules](rules/apache-ranger-spectral-rules.yml)
-- [Vocabulary](vocabulary/apache-ranger-vocabulary.yaml)
-- [NaftikoCapability](capabilities/ranger-workflow.yaml)
-- [JSON-LD](json-ld/apache-ranger-context.jsonld)
+**Kin Score 30.6** — thin · rubric 0.24.0 · scored 2026-10-17
 
-## Features
+| Facet | Score |
+|---|---|
+| Discoverability | 57.1 |
+| Contract quality | 55.9 |
+| Contract governance | 27.3 |
+| Operational transparency | 10.5 |
+| Developer ergonomics | 21.4 |
+| Access clarity | 7.9 |
 
-| Name | Description |
-|------|-------------|
-| Centralized Policy Management | Manage security policies for all Hadoop services from a single interface |
-| Fine-Grained Access Control | Column-level, row-level, and data masking policies for Hive and HBase |
-| Attribute-Based Access Control | Context-aware policies based on user attributes and tag classifications |
-| Audit Logging | Comprehensive audit trail of all resource access events |
-| Multi-Service Support | Supports HDFS, Hive, HBase, Kafka, Storm, Solr, Kudu, and more |
-| LDAP/AD Integration | Sync users and groups from Active Directory or LDAP |
-| Security Zones | Delegate policy administration with security zones |
+**Agent readiness 17.9** — agent-aware
 
-## Use Cases
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | yes |
+| Agentic Access | derived (partial credit) |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | bearer (partial credit) |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | derived (partial credit) |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
 
-| Name | Description |
-|------|-------------|
-| Data Lake Security | Enforce column and row-level security on Hadoop data lake |
-| Regulatory Compliance | Meet GDPR, HIPAA, and SOX requirements with audit logs and masking |
-| Multi-Tenant Authorization | Isolate access between teams and business units |
-| Kafka Topic Authorization | Control which applications can produce and consume Kafka topics |
+**Regulatory alignment 22.5** — Horizontal (data, software, accessibility, platform)
 
-## Integrations
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/apache-ranger/](https://apis.io/providers/apache-ranger/).
 
-| Name | Description |
-|------|-------------|
-| Apache Hadoop | Native HDFS and YARN authorization integration |
-| Apache Hive | Column-level and row-level security for Hive queries |
-| Apache HBase | Table and column family security for HBase |
-| Apache Kafka | Topic-level authorization for Kafka producers and consumers |
-| Apache Atlas | Tag-based policies using Atlas data classifications |
+## How this profile is made
 
-## Artifacts
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
 
-Machine-readable API specifications organized by format.
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Apache Ranger: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
 
-### OpenAPI
+## Open an issue
 
-- [Apache Ranger REST API](openapi/apache-ranger-rest-api.yaml)
-
-### JSON Schema
-
-- [Policy](json-schema/apache-ranger-policy-schema.json)
-- [Ranger Service](json-schema/apache-ranger-ranger-service-schema.json)
-- [Audit Entry](json-schema/apache-ranger-audit-entry-schema.json)
-- [And more...](json-schema/)
-
-### JSON Structure
-
-- [Apache Ranger JSON Structures](json-structure/)
-
-### JSON-LD
-
-- [Apache Ranger Context](json-ld/apache-ranger-context.jsonld)
-
-### Examples
-
-- [Apache Ranger Examples](examples/)
-
-## Capabilities
-
-Naftiko capabilities organized as shared per-API definitions composed into customer-facing workflows.
-
-### Workflow Capabilities
-
-| Workflow | APIs Combined | Tools | Persona |
-|----------|--------------|-------|---------|
-| [Security Policy Workflow](capabilities/ranger-workflow.yaml) | Apache Ranger | 8 | Security Administrator, Compliance Officer |
-
-## Vocabulary
-
-- [Apache Ranger Vocabulary](vocabulary/apache-ranger-vocabulary.yaml) — Unified taxonomy mapping security policy management resources, actions, workflows, and personas
-
-## Rules
-
-- [Apache Ranger Spectral Rules](rules/apache-ranger-spectral-rules.yml) — Rules enforcing Apache Ranger API conventions
-
-## Maintainers
-
-**FN:** Kin Lane
-
-**Email:** info@apievangelist.com
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/apache-ranger/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
